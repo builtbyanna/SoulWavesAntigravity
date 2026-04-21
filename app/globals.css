@@ -1,0 +1,226 @@
+/* ─── Google Fonts (must be first) ─────────────────────────── */
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400&family=Great+Vibes&family=Tsukimi+Rounded:wght@400;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ─── CSS Variables ─────────────────────────────────────────── */
+:root {
+  --deep-brown: #36110D;
+  --accent-brown: #8B1C13;
+  --cream: #FFF8EC;
+  --sand: #E3C4A5;
+  --text-dark: #36110D;
+  --panel-dark: rgba(54, 17, 13, 0.7);
+  --panel-cream: rgba(255, 248, 236, 0.85);
+}
+
+/* ─── Base ──────────────────────────────────────────────────── */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #FFF8EC;
+  color: var(--text-dark);
+  overflow-x: hidden;
+  font-family: 'Tsukimi Rounded', system-ui, sans-serif;
+  font-weight: 400;
+}
+
+/* ─── Scrollbar ─────────────────────────────────────────────── */
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #E6CCB2;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #44140D;
+}
+
+/* ─── Typography ────────────────────────────────────────────── */
+.font-heading {
+  font-family: 'Tsukimi Rounded', system-ui, sans-serif;
+}
+.font-body {
+  font-family: 'Tsukimi Rounded', system-ui, sans-serif;
+}
+.font-great-vibes {
+  font-family: 'Great Vibes', cursive;
+  font-weight: 400;
+}
+.font-courier {
+  font-family: 'Courier Prime', Courier, monospace;
+}
+
+/* ─── Section label ─────────────────────────────────────────── */
+.section-label {
+  font-family: 'Great Vibes', cursive;
+  font-size: 2rem;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  color: var(--accent-brown);
+}
+
+/* ─── Divider rule ──────────────────────────────────────────── */
+.hr-sand {
+  width: 3rem;
+  height: 1px;
+  background: #E6CCB2;
+  display: block;
+  margin: 1.5rem 0;
+}
+.hr-dark {
+  width: 3rem;
+  height: 1px;
+  background: rgba(255,248,236,0.25);
+  display: block;
+  margin: 1.5rem auto;
+}
+
+/* ─── Btn primary (deep red) ────────────────────────────────── */
+.btn-primary {
+  display: inline-block;
+  padding: 0.875rem 2rem;
+  background: var(--accent-brown);
+  color: var(--cream);
+  font-family: 'Tsukimi Rounded', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border: 1px solid transparent;
+  transition: background 0.25s ease, color 0.25s ease;
+}
+.btn-primary:hover {
+  background: var(--deep-brown);
+  color: var(--cream);
+}
+
+/* ─── Btn dark (brown) ──────────────────────────────────────── */
+.btn-dark {
+  display: inline-block;
+  padding: 0.875rem 2rem;
+  background: var(--deep-brown);
+  color: var(--cream);
+  font-family: 'Tsukimi Rounded', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border: 1px solid transparent;
+  transition: background 0.25s ease, border-color 0.25s ease;
+}
+.btn-dark:hover {
+  background: var(--accent-brown);
+}
+
+/* ─── Btn outline cream ─────────────────────────────────────── */
+.btn-outline-cream {
+  display: inline-block;
+  padding: 0.75rem 1.75rem;
+  border: 1px solid rgba(255,248,236,0.4);
+  color: #FFF8EC;
+  font-family: 'Tsukimi Rounded', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  transition: background 0.25s ease, border-color 0.25s ease;
+}
+.btn-outline-cream:hover {
+  background: rgba(255,248,236,0.12);
+  border-color: rgba(255,248,236,0.7);
+}
+
+/* ─── Btn outline dark ──────────────────────────────────────── */
+.btn-outline-dark {
+  display: inline-block;
+  padding: 0.6rem 1.25rem;
+  border: 1px solid rgba(68,20,13,0.35);
+  color: var(--deep-brown);
+  font-family: 'Tsukimi Rounded', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  background: transparent;
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+.btn-outline-dark:hover {
+  background: rgba(68,20,13,0.06);
+  border-color: rgba(68,20,13,0.6);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* ─── Carousel mobile scroll snap ───────────────────────────── */
+.carousel-track {
+  display: flex;
+  gap: 1.5rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  padding-bottom: 0.5rem;
+}
+.carousel-track::-webkit-scrollbar {
+  display: none;
+}
+.carousel-item {
+  scroll-snap-align: start;
+  flex: 0 0 min(85vw, 380px);
+}
+
+/* ─── Testimonial quote marks ───────────────────────────────── */
+.quote-mark {
+  font-family: 'Tsukimi Rounded', sans-serif;
+  font-size: 5rem;
+  line-height: 1;
+  color: rgba(230, 204, 178, 0.3);
+  user-select: none;
+}
+
+/* ─── Services card tag ─────────────────────────────────────── */
+.card-tag {
+  display: inline-block;
+  font-family: 'Tsukimi Rounded', sans-serif;
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--accent-brown);
+  background: transparent;
+  padding: 0;
+}
+
+/* ─── Process step number ───────────────────────────────────── */
+.step-number {
+  font-family: 'Great Vibes', cursive;
+  font-weight: 400;
+  font-size: 3.5rem;
+  color: var(--accent-brown);
+  line-height: 1;
+}
+
+/* ─── Focus ring ────────────────────────────────────────────── */
+input:focus, textarea:focus {
+  outline: none;
+  border-color: var(--deep-brown) !important;
+}
+
+/* ─── Placeholder ───────────────────────────────────────────── */
+::placeholder {
+  color: rgba(68,20,13,0.4);
+  font-size: 0.875rem;
+  font-family: 'Tsukimi Rounded', sans-serif;
+}
