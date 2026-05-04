@@ -1,0 +1,348 @@
+/* ============================================================
+   SOUL WAVES: About Page Styles
+   ============================================================ */
+
+/* ---- Opening hook ---- */
+
+.about-hook {
+  padding: 9rem 0 6rem;
+  background: var(--sw-cream);
+  border-bottom: 1px solid var(--sw-sand);
+}
+
+.about-hook__line {
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: clamp(1.75rem, 4vw, 3rem);
+  color: var(--sw-brown);
+  line-height: 1.2;
+  max-width: 680px;
+}
+
+.about-hook__continuation {
+  font-size: clamp(1rem, 1.5vw, 1.15rem);
+  color: var(--sw-brown);
+  opacity: 0.7;
+  max-width: 560px;
+  line-height: 1.75;
+  margin-top: 1.5rem;
+}
+
+/* ---- Before section ---- */
+
+.about-before {
+  padding: 6rem 0;
+  background: rgba(230, 204, 178, 0.15);
+  border-bottom: 1px solid var(--sw-sand);
+}
+
+.about-before__layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: start;
+}
+
+.about-before__caption {
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--sw-brown);
+  opacity: 0.5;
+  margin-top: 0.875rem;
+  display: block;
+  text-align: center;
+}
+
+.about-before__photo {
+  position: relative;
+}
+
+.about-before__photo img {
+  width: 100%;
+  border-radius: 4px;
+  display: block;
+  box-shadow: 0 16px 48px rgba(68, 20, 13, 0.12);
+}
+
+/* Timeline */
+
+.about-timeline {
+  padding-top: 0.5rem;
+}
+
+.about-timeline__label {
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--sw-copper);
+  margin-bottom: 2rem;
+  display: block;
+}
+
+.about-timeline__beat {
+  padding: 0 0 2.25rem 1.75rem;
+  position: relative;
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.about-timeline__beat.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.about-timeline__beat::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.45rem;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--sw-copper);
+  opacity: 0.6;
+}
+
+.about-timeline__beat::after {
+  content: '';
+  position: absolute;
+  left: 3.5px;
+  top: 1.25rem;
+  width: 1px;
+  height: calc(100% - 0.75rem);
+  background: var(--sw-sand);
+}
+
+.about-timeline__beat:last-child::after {
+  display: none;
+}
+
+.about-timeline__year {
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  color: var(--sw-copper);
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 0.3rem;
+}
+
+.about-timeline__text {
+  font-size: 0.95rem;
+  color: var(--sw-brown);
+  line-height: 1.65;
+}
+
+@media (max-width: 768px) {
+  .about-before__layout {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .about-before__photo {
+    max-width: 320px;
+    margin: 0 auto;
+  }
+}
+
+/* ---- Pivot ---- */
+
+.about-pivot {
+  padding: 5rem 0;
+  background: var(--sw-cream);
+}
+
+.about-pivot__content {
+  max-width: 640px;
+}
+
+.about-pivot__eyebrow {
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--sw-copper);
+  display: block;
+  margin-bottom: 1.25rem;
+}
+
+.about-pivot__text {
+  font-weight: 500;
+  font-size: clamp(1.1rem, 2vw, 1.35rem);
+  color: var(--sw-brown);
+  line-height: 1.55;
+  margin-bottom: 1.25rem;
+}
+
+.about-pivot__follow {
+  font-size: 1rem;
+  color: var(--sw-brown);
+  opacity: 0.75;
+  line-height: 1.75;
+}
+
+/* ---- Now section ---- */
+
+.about-now {
+  padding: 6rem 0;
+  background: rgba(230, 204, 178, 0.15);
+  border-top: 1px solid var(--sw-sand);
+  border-bottom: 1px solid var(--sw-sand);
+}
+
+.about-now__layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: center;
+}
+
+.about-now__label {
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--sw-copper);
+  display: block;
+  margin-bottom: 1.25rem;
+}
+
+.about-now__heading {
+  font-weight: 500;
+  font-size: clamp(1.2rem, 2vw, 1.5rem);
+  color: var(--sw-brown);
+  line-height: 1.35;
+  margin-bottom: 1.25rem;
+}
+
+.about-now__text {
+  font-size: 0.975rem;
+  color: var(--sw-brown);
+  opacity: 0.8;
+  line-height: 1.75;
+}
+
+.about-now__photo {
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 20px 56px rgba(68, 20, 13, 0.14);
+}
+
+.about-now__photo::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(197, 120, 60, 0.12);
+  pointer-events: none;
+}
+
+.about-now__photo img {
+  width: 100%;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .about-now__layout {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .about-now__photo {
+    max-width: 360px;
+    margin: 0 auto;
+  }
+}
+
+/* ---- What this means for you ---- */
+
+.about-means {
+  padding: 5.5rem 0;
+  background: var(--sw-cream);
+}
+
+.about-means__layout {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+.about-means__label {
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--sw-copper);
+  display: block;
+  padding-top: 0.3rem;
+}
+
+.about-means__points {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.about-means__point {
+  padding-left: 1.5rem;
+  border-left: 2px solid var(--sw-sand);
+  transition: border-color 0.3s;
+}
+
+.about-means__point:hover {
+  border-left-color: var(--sw-copper);
+}
+
+.about-means__point-title {
+  font-weight: 500;
+  font-size: 1rem;
+  color: var(--sw-brown);
+  margin-bottom: 0.4rem;
+}
+
+.about-means__point-text {
+  font-size: 0.9rem;
+  color: var(--sw-brown);
+  opacity: 0.75;
+  line-height: 1.65;
+}
+
+@media (max-width: 640px) {
+  .about-means__layout {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+/* ---- About CTA ---- */
+
+.about-cta {
+  padding: 5rem 0 6rem;
+  background: var(--sw-cream);
+  border-top: 1px solid var(--sw-sand);
+}
+
+.about-cta__text {
+  font-weight: 500;
+  font-size: clamp(1.2rem, 2.2vw, 1.5rem);
+  color: var(--sw-brown);
+  margin-bottom: 2rem;
+  max-width: 520px;
+}
+
+.about-cta__sub {
+  font-size: 0.875rem;
+  color: var(--sw-brown);
+  opacity: 0.6;
+  margin-top: 1.25rem;
+}
+
+.about-cta__sub a {
+  color: var(--sw-copper);
+  text-decoration: none;
+}

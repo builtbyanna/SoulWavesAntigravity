@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Soul Waves | Digitales Back-End für Coaches und Kursanbieter</title>
+  <meta name="description" content="Ich baue und betreibe das digitale Back-End deines Business. Websites, Kursplattformen, Shopify-Shops, KI-Chatbots. Richtig gebaut. Am Laufen gehalten.">
+  <link rel="canonical" href="https://soulwavesva.com/de/">
+  <link rel="alternate" hreflang="en" href="https://soulwavesva.com/">
+  <link rel="alternate" hreflang="de" href="https://soulwavesva.com/de/">
+  <link rel="alternate" hreflang="x-default" href="https://soulwavesva.com/">
+  <link rel="stylesheet" href="../css/global.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/homepage.css">
+  <link rel="stylesheet" href="../css/frieda.css">
+</head>
+<body>
+
+  <a href="#main" class="skip-nav">Zum Hauptinhalt springen</a>
+
+  <!-- NAV -->
+  <header class="sw-nav" role="banner">
+    <nav class="sw-nav__inner" aria-label="Hauptnavigation">
+      <a href="#hero" class="sw-nav__logo" aria-label="Soul Waves Startseite">
+        <img src="../assets/NewLogoTransparent.svg" alt="Soul Waves" width="150" height="47">
+      </a>
+      <ul class="sw-nav__links">
+        <li><a href="#services">Leistungen</a></li>
+        <li><a href="#process">Ablauf</a></li>
+        <li><a href="#about">Über mich</a></li>
+        <li><a href="#work">Projekte</a></li>
+        <li><a href="#contact">Kontakt</a></li>
+      </ul>
+      <div class="sw-nav__right">
+        <div class="sw-nav__lang" aria-label="Sprache">
+          <a href="../index.html" data-lang="en">EN</a>
+          <span class="sw-nav__lang-sep" aria-hidden="true">|</span>
+          <a href="index.html" data-lang="de" class="active">DE</a>
+        </div>
+        <a href="https://calendar.app.google/WKhMs5XL1DeaccdK6" class="btn-primary" target="_blank" rel="noopener">
+          Lass uns reden
+        </a>
+        <button class="sw-nav__hamburger" aria-label="Menu öffnen" aria-expanded="false" aria-controls="mobile-menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <div class="sw-nav__mobile-menu" id="mobile-menu" role="dialog" aria-modal="true" aria-label="Navigation">
+    <button class="sw-nav__mobile-close" aria-label="Menu schließen">&times;</button>
+    <a href="#services">Leistungen</a>
+    <a href="#process">Ablauf</a>
+    <a href="#about">Über mich</a>
+    <a href="#work">Projekte</a>
+    <a href="#contact">Kontakt</a>
+    <a href="https://calendar.app.google/WKhMs5XL1DeaccdK6" class="btn-primary" target="_blank" rel="noopener">Lass uns reden</a>
+    <div class="sw-nav__mobile-lang">
+      <a href="../index.html" data-lang="en">EN</a>
+      <a href="index.html" data-lang="de">DE</a>
+    </div>
+  </div>
+
+  <main id="main">
+
+    <!-- HERO -->
+    <section id="hero" class="hero" aria-label="Hero">
+      <div class="hero__bg-wrap" aria-hidden="true">
+        <img
+          src="../assets/midjourney/mj-hero-bg.png"
+          alt=""
+          class="hero__bg"
+          loading="eager"
+          fetchpriority="high"
+        >
+        <div class="hero__bg-overlay"></div>
+      </div>
+
+      <div id="hero-particles" aria-hidden="true"></div>
+
+      <div class="container" style="display: contents;">
+
+        <div class="hero__content">
+          <span class="hero__eyebrow">Soul Waves</span>
+
+          <h1 class="hero__headline fade-up">
+            Ich baue und betreibe das digitale Back-End deines Business.
+          </h1>
+
+          <p class="hero__subline fade-up">
+            Websites, Kursplattformen, Shopify-Shops, Chatbots.<br>
+            Richtig gebaut. Am Laufen gehalten.
+          </p>
+
+          <div class="hero__cta-wrap fade-up">
+            <a
+              href="https://calendar.app.google/WKhMs5XL1DeaccdK6"
+              class="btn-primary"
+              target="_blank"
+              rel="noopener"
+            >
+              Discovery Call buchen
+            </a>
+            <a href="#about" class="hero__cta-link">
+              Die Geschichte dahinter &#8594;
+            </a>
+          </div>
+        </div>
+
+        <div class="hero__photo-col">
+          <div class="hero__photo-wrap">
+            <div class="hero__photo-container hero__photo-container--rounded">
+              <img
+                src="../assets/me_coconut.JPG"
+                alt="Anna Schuster"
+                class="hero__photo"
+                loading="eager"
+                width="480"
+                height="600"
+              >
+              <div class="hero__photo-overlay" aria-hidden="true"></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- LEISTUNGEN -->
+    <section id="services" class="services-section section section--shimmer" aria-labelledby="services-heading">
+      <div class="container">
+        <div class="section-header fade-up">
+          <span class="section-header__display" id="services-heading">Leistungen</span>
+          <p class="section-header__sub">
+            Das digitale Fundament deines Business.<br>
+            Websites, Kursplattformen, Shopify-Shops, Buchungssysteme, Chatbots, Videobearbeitung.<br>
+            Nimm, was du brauchst.
+          </p>
+        </div>
+
+        <div class="services-accord fade-up" role="list">
+
+          <!-- Websites -->
+          <div class="accord-item is-open" role="listitem">
+            <button class="accord-trigger" aria-expanded="true">
+              <span class="accord-name">Websites</span>
+              <span class="accord-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="accord-body">
+              <ul class="accord-list">
+                <li>Custom-coded oder WordPress, responsiv und individuell</li>
+                <li>Klare Struktur und Calls to Action, die funktionieren</li>
+                <li>Go-Live-Support inklusive</li>
+              </ul>
+              <div class="accord-price">ab &euro;800</div>
+              <a href="services.html#websites" class="accord-cta">Alle Details &#8594;</a>
+            </div>
+          </div>
+
+          <!-- Kursplattformen -->
+          <div class="accord-item" role="listitem">
+            <button class="accord-trigger" aria-expanded="false">
+              <span class="accord-name">Kurs- und Membership-Plattformen</span>
+              <span class="accord-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="accord-body">
+              <ul class="accord-list">
+                <li>Kursbibliothek, Checkout, Login-Bereich, Willkommensmails</li>
+                <li>SureCart/SureMembers, Kajabi, elopage/ablefy, Skool, Systeme.io</li>
+                <li>Das ganze laufende System, nicht nur die Einrichtung</li>
+              </ul>
+              <div class="accord-price">ab &euro;500</div>
+              <a href="services.html#platforms" class="accord-cta">Alle Details &#8594;</a>
+            </div>
+          </div>
+
+          <!-- Shopify -->
+          <div class="accord-item" role="listitem">
+            <button class="accord-trigger" aria-expanded="false">
+              <span class="accord-name">Shopify-Shops</span>
+              <span class="accord-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="accord-body">
+              <ul class="accord-list">
+                <li>Vollständiges Shop-Setup</li>
+                <li>Ansprechend und auf Conversions ausgelegt</li>
+                <li>Premium-Builds mit Custom-Code auf Anfrage</li>
+              </ul>
+              <div class="accord-price">ab &euro;800</div>
+              <a href="services.html#shopify" class="accord-cta">Alle Details &#8594;</a>
+            </div>
+          </div>
+
+          <!-- Buchungssysteme -->
+          <div class="accord-item" role="listitem">
+            <button class="accord-trigger" aria-expanded="false">
+              <span class="accord-name">Buchungssysteme</span>
+              <span class="accord-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="accord-body">
+              <ul class="accord-list">
+                <li>Momoyoga für Yoga-Studios und Fitnesscenter mit Abonnements</li>
+                <li>Cal.com für Coaches und Berater mit Einzelterminen</li>
+                <li>Eingerichtet, mit der Website verbunden, getestet, übergeben</li>
+              </ul>
+              <div class="accord-price">ab &euro;300</div>
+              <a href="services.html#booking" class="accord-cta">Alle Details &#8594;</a>
+            </div>
+          </div>
+
+          <!-- KI-Chatbots -->
+          <div class="accord-item" role="listitem">
+            <button class="accord-trigger" aria-expanded="false">
+              <span class="accord-name">KI-Chatbots und Automationen</span>
+              <span class="accord-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="accord-body">
+              <ul class="accord-list">
+                <li>FAQ-Antworten, Lead-Erfassung, Buchungsweiterleitung. 24/7.</li>
+                <li>Antwortet automatisch auf Englisch und Deutsch. Du wählst das KI-Modell.</li>
+                <li>Passt in bestehende oder neue Websites</li>
+              </ul>
+              <div class="accord-price">ab &euro;500</div>
+              <a href="services.html#chatbots" class="accord-cta">Alle Details &#8594;</a>
+            </div>
+          </div>
+
+          <!-- Videobearbeitung -->
+          <div class="accord-item" role="listitem">
+            <button class="accord-trigger" aria-expanded="false">
+              <span class="accord-name">Videobearbeitung</span>
+              <span class="accord-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="accord-body">
+              <ul class="accord-list">
+                <li>DaVinci Resolve: Schnitt, Untertitel, Tonoptimierung</li>
+                <li>Kursinhalte, Social-Clips, aufgezeichnete Webinare</li>
+                <li>Export in plattformfertige Formate</li>
+              </ul>
+              <div class="accord-price">&euro;35/Std.</div>
+              <a href="services.html#video-editing" class="accord-cta">Alle Details &#8594;</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ABLAUF -->
+    <section id="process" class="process-section section" aria-labelledby="process-heading">
+      <div class="container">
+        <div class="section-header fade-up">
+          <span class="section-header__display" id="process-heading">Ablauf</span>
+        </div>
+
+        <div class="process-steps">
+
+          <div class="process-step fade-up">
+            <div class="process-step__num" aria-hidden="true">01</div>
+            <div class="process-step__content">
+              <h3>Meld dich</h3>
+              <p>Schreib mir oder such dir einen Termin aus. Beides ist gut.</p>
+            </div>
+          </div>
+
+          <div class="process-connector" aria-hidden="true"></div>
+
+          <div class="process-step fade-up">
+            <div class="process-step__num" aria-hidden="true">02</div>
+            <div class="process-step__content">
+              <h3>Wir reden</h3>
+              <p>30 Minuten. Kein Skript. Ich schau mir an, was du hast, du sagst mir, was du brauchst.</p>
+            </div>
+          </div>
+
+          <div class="process-connector" aria-hidden="true"></div>
+
+          <div class="process-step fade-up">
+            <div class="process-step__num" aria-hidden="true">03</div>
+            <div class="process-step__content">
+              <h3>Erledigt</h3>
+              <p>Einmal gebaut. Am Laufen gehalten. Du konzentrierst dich auf die Arbeit, die sich wirklich auszahlt.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ÜBER MICH -->
+    <section id="about" class="about-inline section section--shimmer" aria-labelledby="about-heading">
+      <div class="container">
+
+        <h2 class="about-inline__hook fade-up" id="about-heading">
+          Ich habe früher in einem Gefängnis gearbeitet.
+        </h2>
+
+        <div class="about-inline__before">
+          <div class="about-inline__photo fade-up">
+            <img
+              src="../assets/me_prisonguard.jpeg"
+              alt="Anna vor Soul Waves"
+              loading="lazy"
+              width="480"
+              height="600"
+              class="about-inline__prisonguard"
+            >
+            <span class="about-inline__caption">Vor all dem hier.</span>
+          </div>
+
+          <div class="about-inline__story fade-up">
+            <p>
+              Davor: ein Kindergarten, eine Bäckerei, ein Horror-Escape-Theater. Kein typischer Freelancer-Lebenslauf. Aber das alles hat mir Dinge mitgegeben, die in dieser Arbeit wirklich zählen: Ruhe bewahren, wenn etwas schiefläuft. Situationen schnell einschätzen. Struktur aufbauen, wo keine ist. Den Menschen hinter dem Prozess sehen.
+            </p>
+            <p>
+              Bevor ich gegangen bin, habe ich angefangen, mit HTML und CSS rumzuspielen. Ich war nicht gut darin. Ich halte Code immer noch für eine Art Magie. Meinen Hogwarts-Brief habe ich nie bekommen, also ist das das Nächste. Ich wurde VA, entschied mich für die Tech-Richtung, machte noch mehr Weiterbildungen und landete wieder beim Bauen.
+            </p>
+          </div>
+        </div>
+
+        <div class="about-inline__now">
+          <div class="about-inline__now-text fade-up">
+            <span class="about-inline__now-label">Heute</span>
+            <p>Cafe-Morgen. Nachmittags ins Wasser. Bauen, wo auch immer das WLAN stimmt.</p>
+            <p>Coaches, Berater und Kursanbieter, die ihr digitales Fundament geregelt haben wollen, ohne es selbst managen zu müssen.</p>
+          </div>
+
+          <div class="about-inline__now-photo fade-up">
+            <img
+              src="../assets/me_lighthouse.jpeg"
+              alt="Anna Schuster"
+              loading="lazy"
+              width="480"
+              height="560"
+            >
+          </div>
+        </div>
+
+        <!-- Testimonial B.E. -->
+        <div class="pull-quote pull-quote--inline">
+          <div class="pull-quote__rule slide-left" aria-hidden="true"></div>
+          <blockquote>
+            <p class="pull-quote__text slide-right">
+              Ich schätze besonders ihre strukturierte Arbeitsweise, ihr strategisches Denken
+              und ihr starkes Gespür für Marke, Zielgruppe und Kommunikation.
+            </p>
+          </blockquote>
+          <div class="pull-quote__rule-bottom slide-left" aria-hidden="true"></div>
+          <cite>
+            <span class="pull-quote__name">B.E.</span>
+            <span class="pull-quote__role">Gründerin, Empowermind Academy</span>
+          </cite>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- PROJEKTE -->
+    <section id="work" class="work-section section" aria-labelledby="work-heading">
+      <div class="container">
+        <div class="section-header fade-up">
+          <span class="section-header__display" id="work-heading">Projekte</span>
+          <p class="section-header__sub">Eine kleine Auswahl. Mehr folgt.</p>
+        </div>
+
+        <div class="portfolio-strip__grid">
+
+          <!-- Anja Bodenstein Yogaplattform -->
+          <article class="portfolio-card fade-up stagger-1">
+            <div class="portfolio-card__screenshot">
+              <img
+                src="../assets/screenshots/anja-yoga.jpg"
+                alt="Anja Bodenstein Online-Yogaplattform"
+                loading="lazy"
+                width="800"
+                height="500"
+              >
+            </div>
+            <div class="portfolio-card__body">
+              <span class="portfolio-card__type">Yoga-Lehrerinnen-Plattform</span>
+              <h3 class="portfolio-card__title">Yoga-Membership-Plattform mit Videothek und Live-Kurs-Buchungen</h3>
+              <p class="portfolio-card__outcome">
+                Mitgliederbereich, Videothek und Live-Kurs-Buchung auf einem bestehenden WordPress-Auftritt. Mitglieder haben sofort nach dem Abonnement Zugang.
+              </p>
+              <a href="https://anja-bodenstein.de/online-yoga/" class="portfolio-card__link" target="_blank" rel="noopener">
+                Live-Seite ansehen &#8594;
+              </a>
+            </div>
+          </article>
+
+          <!-- Elektrofuzzy -->
+          <article class="portfolio-card fade-up stagger-2">
+            <div class="portfolio-card__screenshot">
+              <img
+                src="../assets/screenshots/elektrofuzzy.jpg"
+                alt="Elektrofuzzy Website"
+                loading="lazy"
+                width="800"
+                height="500"
+              >
+            </div>
+            <div class="portfolio-card__body">
+              <span class="portfolio-card__type">Handwerksunternehmen</span>
+              <h3 class="portfolio-card__title">Website für einen österreichischen Elektriker-Betrieb</h3>
+              <p class="portfolio-card__outcome">
+                Custom-coded Website für ein Wiener Handwerksunternehmen. Klare Preisstruktur, saubere Navigation, schnelle Ladezeiten.
+              </p>
+              <a href="https://elektrofuzzy.vercel.app/" class="portfolio-card__link" target="_blank" rel="noopener">
+                Seite ansehen &#8594;
+              </a>
+            </div>
+          </article>
+
+          <!-- Bald verfügbar -->
+          <article class="portfolio-card portfolio-card--soon fade-up stagger-3">
+            <div class="portfolio-card__screenshot portfolio-card__screenshot--placeholder">
+              <span>Neues Projekt in Arbeit</span>
+            </div>
+            <div class="portfolio-card__body">
+              <span class="portfolio-card__type">Neues Kundenprojekt</span>
+              <h3 class="portfolio-card__title">Aktuell in der Umsetzung</h3>
+              <p class="portfolio-card__outcome">
+                Details und Live-Link folgen nach Fertigstellung.
+              </p>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- KONTAKT -->
+    <section id="contact" class="contact-inline section" aria-labelledby="contact-heading">
+      <div class="container">
+
+        <div class="section-header fade-up">
+          <span class="section-header__display" id="contact-heading">Kontakt</span>
+          <p class="section-header__sub">
+            30 Minuten. Ich schau mir an, was du hast, du sagst mir, was du brauchst.
+          </p>
+        </div>
+
+        <div class="contact-inline__layout">
+
+          <!-- Links: Buchungsoptionen -->
+          <div class="contact-inline__options fade-up">
+            <div class="contact-inline__primary">
+              <span class="contact-inline__label">Call buchen</span>
+              <p class="contact-inline__desc">
+                Such dir einen Termin aus. Ich schaue mir dein Setup vorher an. Du brauchst keine Vorbereitung.
+              </p>
+              <a
+                href="https://calendar.app.google/WKhMs5XL1DeaccdK6"
+                class="btn-primary"
+                target="_blank"
+                rel="noopener"
+              >
+                Discovery Call buchen
+              </a>
+            </div>
+
+            <div class="contact-inline__alt">
+              <a href="mailto:anna@soulwavesva.com" class="contact-inline__link">anna@soulwavesva.com</a>
+              <a href="https://wa.me/436603019415" class="contact-inline__link" target="_blank" rel="noopener">WhatsApp</a>
+            </div>
+          </div>
+
+          <!-- Rechts: Kontaktformular -->
+          <div class="contact-inline__form fade-up">
+            <form
+              class="contact-form"
+              name="contact-de"
+              method="POST"
+              data-netlify="true"
+              netlify-honeypot="bot-field"
+              action="/contact-success.html"
+            >
+              <input type="hidden" name="form-name" value="contact-de">
+              <p style="display:none;">
+                <label>Nicht ausfüllen: <input name="bot-field"></label>
+              </p>
+
+              <div class="form-field">
+                <label for="name">Dein Name</label>
+                <input type="text" id="name" name="name" autocomplete="name" required placeholder="Dein Name">
+              </div>
+
+              <div class="form-field">
+                <label for="email">E-Mail</label>
+                <input type="email" id="email" name="email" autocomplete="email" required placeholder="du@beispiel.de">
+              </div>
+
+              <div class="form-field">
+                <label for="message">Woran arbeitest du gerade?</label>
+                <textarea id="message" name="message" rows="4" placeholder="Ein paar Sätze reichen. Oder einfach hallo sagen."></textarea>
+              </div>
+
+              <div class="form-field">
+                <label for="found">Wie hast du mich gefunden?</label>
+                <input type="text" id="found" name="found" placeholder="Google, LinkedIn, Empfehlung...">
+              </div>
+
+              <button type="submit" class="btn-primary">Nachricht senden</button>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="sw-footer" role="contentinfo">
+    <div class="container">
+      <div class="sw-footer__inner">
+
+        <div class="sw-footer__brand">
+          <img src="../assets/NewLogoTransparent.svg" alt="Soul Waves" class="sw-footer__logo" width="100" height="32">
+          <p class="sw-footer__tagline">
+            Ich baue und betreibe das digitale Back-End deines Business.
+          </p>
+        </div>
+
+        <div class="sw-footer__col">
+          <p class="sw-footer__col-title">Navigation</p>
+          <ul class="sw-footer__nav-list">
+            <li><a href="#services">Leistungen</a></li>
+            <li><a href="#about">Über mich</a></li>
+            <li><a href="#contact">Kontakt</a></li>
+          </ul>
+        </div>
+
+        <div class="sw-footer__col">
+          <p class="sw-footer__col-title">Kontakt</p>
+          <a href="mailto:anna@soulwavesva.com" class="sw-footer__contact-item">anna@soulwavesva.com</a>
+          <a href="https://wa.me/436603019415" class="sw-footer__contact-item" target="_blank" rel="noopener">WhatsApp</a>
+          <div class="sw-footer__social">
+            <a href="#" class="sw-footer__social-link" aria-label="LinkedIn" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            </a>
+            <a href="#" class="sw-footer__social-link" aria-label="Instagram" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+            </a>
+          </div>
+        </div>
+
+      </div>
+      <div class="sw-footer__bottom">
+        <span class="sw-footer__copy">&copy; 2025 Soul Waves Solutions LLC</span>
+        <nav class="sw-footer__legal" aria-label="Rechtliches">
+          <a href="../impressum.html">Impressum</a>
+          <a href="../datenschutz.html">Datenschutz</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+  <script src="../js/lang.js"></script>
+  <script src="../js/frieda.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
+  <script defer src="../js/particles-init.js"></script>
+</body>
+</html>

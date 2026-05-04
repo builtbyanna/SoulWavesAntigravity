@@ -1,0 +1,245 @@
+/* ============================================================
+   SOUL WAVES: Contact Page Styles
+   ============================================================ */
+
+.contact-hero {
+  padding: 8rem 0 4rem;
+  background: var(--sw-cream);
+  border-bottom: 1px solid var(--sw-sand);
+}
+
+.contact-hero__heading {
+  font-weight: 500;
+  font-size: clamp(1.75rem, 3.5vw, 2.75rem);
+  color: var(--sw-brown);
+  line-height: 1.2;
+  margin-bottom: 0.875rem;
+  max-width: 560px;
+}
+
+.contact-hero__sub {
+  font-size: 1rem;
+  color: var(--sw-brown);
+  opacity: 0.7;
+  max-width: 480px;
+  line-height: 1.7;
+}
+
+/* ---- Primary booking block ---- */
+
+.contact-book {
+  padding: 5rem 0;
+  background: var(--sw-cream);
+}
+
+.contact-book__layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: start;
+}
+
+.contact-book__label {
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--sw-copper);
+  display: block;
+  margin-bottom: 1.25rem;
+}
+
+.contact-book__voice {
+  font-size: 1rem;
+  color: var(--sw-brown);
+  opacity: 0.8;
+  line-height: 1.75;
+  margin-bottom: 2rem;
+  max-width: 420px;
+}
+
+.contact-book__privacy {
+  font-size: 0.75rem;
+  color: var(--sw-brown);
+  opacity: 0.5;
+  margin-top: 1rem;
+  line-height: 1.6;
+}
+
+.contact-book__privacy a {
+  color: var(--sw-copper);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+/* ---- Contact form ---- */
+
+.contact-form-wrap {
+  background: rgba(230, 204, 178, 0.18);
+  border: 1px solid var(--sw-sand);
+  border-radius: 10px;
+  padding: 2.5rem;
+}
+
+.contact-form__title {
+  font-weight: 500;
+  font-size: 1.1rem;
+  color: var(--sw-brown);
+  margin-bottom: 1.75rem;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.form-field label {
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  color: var(--sw-brown);
+  opacity: 0.75;
+  text-transform: uppercase;
+}
+
+.form-field input,
+.form-field select,
+.form-field textarea {
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  color: var(--sw-brown);
+  background: var(--sw-cream);
+  border: 1.5px solid var(--sw-sand);
+  border-radius: 6px;
+  padding: 0.7rem 0.9rem;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  appearance: none;
+  -webkit-appearance: none;
+  width: 100%;
+}
+
+.form-field input:focus,
+.form-field select:focus,
+.form-field textarea:focus {
+  outline: none;
+  border-color: var(--sw-copper);
+  box-shadow: 0 0 0 3px rgba(197, 120, 60, 0.12);
+}
+
+.form-field input::placeholder,
+.form-field textarea::placeholder {
+  color: var(--sw-brown);
+  opacity: 0.35;
+}
+
+.form-field select {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='%2344140D' opacity='.5' d='M1 1l5 5 5-5'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.9rem center;
+  padding-right: 2.5rem;
+  cursor: pointer;
+}
+
+.form-field textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.contact-form .btn-primary {
+  width: 100%;
+  text-align: center;
+  margin-top: 0.5rem;
+}
+
+/* ---- Tertiary contact ---- */
+
+.contact-tertiary {
+  padding: 4rem 0 5rem;
+  background: rgba(230, 204, 178, 0.12);
+  border-top: 1px solid var(--sw-sand);
+}
+
+.contact-tertiary__layout {
+  display: flex;
+  gap: 4rem;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.contact-tertiary__group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.contact-tertiary__label {
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--sw-copper);
+  margin-bottom: 0.25rem;
+}
+
+.contact-tertiary__link {
+  font-size: 0.95rem;
+  color: var(--sw-brown);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.contact-tertiary__link:hover {
+  color: var(--sw-copper);
+}
+
+.contact-tertiary__social {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 0.25rem;
+}
+
+.contact-tertiary__social a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 1px solid var(--sw-sand);
+  color: var(--sw-brown);
+  text-decoration: none;
+  transition: border-color 0.2s, color 0.2s;
+}
+
+.contact-tertiary__social a:hover {
+  border-color: var(--sw-copper);
+  color: var(--sw-copper);
+}
+
+.contact-tertiary__social svg {
+  width: 15px;
+  height: 15px;
+  fill: currentColor;
+}
+
+@media (max-width: 768px) {
+  .contact-book__layout {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .contact-form-wrap {
+    padding: 1.75rem;
+  }
+
+  .contact-tertiary__layout {
+    gap: 2.5rem;
+  }
+}
