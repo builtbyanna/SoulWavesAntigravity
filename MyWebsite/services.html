@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="css/global.css">
   <link rel="stylesheet" href="css/components.css">
   <link rel="stylesheet" href="css/services.css">
+  <link rel="stylesheet" href="css/homepage.css">
   <link rel="stylesheet" href="css/frieda.css">
 </head>
 <body>
@@ -18,23 +19,27 @@
   <a href="#main" class="skip-nav">Skip to main content</a>
 
   <!-- NAV -->
-  <header class="sw-nav" role="banner">
+  <header class="sw-nav sw-nav--hero-dark" role="banner">
     <nav class="sw-nav__inner" aria-label="Main navigation">
-      <a href="index.html" class="sw-nav__logo" aria-label="Soul Waves home">
-        <img src="assets/NewLogoTransparent.svg" alt="Soul Waves" width="120" height="38">
+      <a href="index.html#hero" class="sw-nav__logo" aria-label="Soul Waves home">
+        <img src="assets/NewLogoTransparent.svg" alt="Soul Waves" width="340" height="106">
       </a>
       <ul class="sw-nav__links">
-        <li><a href="services.html" class="active">Services</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="index.html#services">Services</a></li>
+        <li><a href="index.html#process">Process</a></li>
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#work">My Work</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
       </ul>
       <div class="sw-nav__right">
-        <div class="sw-nav__lang">
-          <a href="services.html" data-lang="en" class="active">EN</a>
+        <div class="sw-nav__lang" aria-label="Language">
+          <a href="index.html" data-lang="en" class="active">EN</a>
           <span class="sw-nav__lang-sep" aria-hidden="true">|</span>
-          <a href="de/services.html" data-lang="de">DE</a>
+          <a href="de/index.html" data-lang="de">DE</a>
         </div>
-        <a href="https://calendar.app.google/WKhMs5XL1DeaccdK6" class="btn-primary" target="_blank" rel="noopener">Let's talk</a>
+        <a href="https://calendar.app.google/WKhMs5XL1DeaccdK6" class="btn-primary" target="_blank" rel="noopener">
+          Let's talk
+        </a>
         <button class="sw-nav__hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
           <span></span><span></span><span></span>
         </button>
@@ -44,13 +49,15 @@
 
   <div class="sw-nav__mobile-menu" id="mobile-menu" role="dialog" aria-modal="true" aria-label="Navigation menu">
     <button class="sw-nav__mobile-close" aria-label="Close menu">&times;</button>
-    <a href="services.html">Services</a>
-    <a href="about.html">About</a>
-    <a href="contact.html">Contact</a>
+    <a href="index.html#services">Services</a>
+    <a href="index.html#process">Process</a>
+    <a href="index.html#about">About</a>
+    <a href="index.html#work">My Work</a>
+    <a href="index.html#contact">Contact</a>
     <a href="https://calendar.app.google/WKhMs5XL1DeaccdK6" class="btn-primary" target="_blank" rel="noopener">Let's talk</a>
     <div class="sw-nav__mobile-lang">
-      <a href="services.html" data-lang="en">EN</a>
-      <a href="de/services.html" data-lang="de">DE</a>
+      <a href="index.html" data-lang="en">EN</a>
+      <a href="de/index.html" data-lang="de">DE</a>
     </div>
   </div>
 
@@ -85,15 +92,13 @@
               <h2 class="service-card__title">Custom websites and WordPress builds</h2>
               <p class="service-card__desc">
                 For coaches, consultants, and small online businesses. Scope and timeline defined before a line is written.
-                Lead-capture structure, legal pages, mobile-first, go-live support.
               </p>
               <div class="service-card__includes-title">What's included in every build:</div>
               <ul class="service-card__list">
-                <li>Full design and build</li>
-                <li>Lead-capture structure and CTAs</li>
-                <li>Legal pages set up (Impressum, Datenschutz)</li>
-                <li>Mobile-optimised</li>
-                <li>Go-live support</li>
+                <li>Full design and build, responsive and unique</li>
+                <li>Lead-capture structure and clear CTAs</li>
+                <li>Mobile-optimised and fast</li>
+                <li>Go-live handover and short documentation</li>
               </ul>
               <div class="service-card__tiers">
                 <div class="service-card__tier">
@@ -131,10 +136,10 @@
                 Course library, checkout, login area, welcome emails. The whole working system, not just the setup. Platform chosen based on what you actually need.
               </p>
               <ul class="service-card__list">
-                <li>SureCart and SureMembers on WordPress (or Kajabi, Skool, Systeme.io, elopage/ablefy for DACH)</li>
-                <li>Course or video library, checkout pages, login area</li>
+                <li>Course or video library, checkout pages, protected login area</li>
                 <li>Automatic welcome and confirmation emails</li>
-                <li>Short client documentation so you can manage it</li>
+                <li>Platform chosen based on what you actually need</li>
+                <li>Short documentation so you can manage it yourself</li>
               </ul>
               <div class="service-card__tiers">
                 <div class="service-card__tier">
@@ -199,7 +204,7 @@
               <span class="service-card__subtitle">AI Chatbots and Automations</span>
               <h2 class="service-card__title">A bot that answers FAQs, qualifies leads and routes to booking. 24/7.</h2>
               <p class="service-card__desc">
-                Responds automatically in EN and DE. You choose the AI model. Can be added to any existing site or built into a new project. This site has one: Frieda, bottom right.
+                Responds automatically in EN and DE. You choose the AI model. Can be added to any existing site or built into a new project.
               </p>
               <ul class="service-card__list">
                 <li>FAQ answers, lead capture, booking routing</li>
@@ -217,46 +222,19 @@
                   <span class="service-card__tier-price">Within project scope</span>
                 </div>
               </div>
-              <a href="contact.html" class="service-card__cta">Let's talk about a chatbot</a>
-            </div>
-          </article>
-
-          <!-- Booking systems -->
-          <article class="service-card service-card--expanded fade-up stagger-5" id="booking">
-            <div class="service-card__image">
-              <img src="assets/midjourney/mj-platforms.png" alt="Booking system setup" loading="lazy" width="600" height="338">
-            </div>
-            <div class="service-card__body">
-              <span class="service-card__subtitle">Booking Systems</span>
-              <h2 class="service-card__title">From "send me a DM to book" to a system that handles it</h2>
-              <p class="service-card__desc">
-                Momoyoga for yoga and fitness studios with recurring memberships. Cal.com for coaches and consultants booking individual appointments. Set up, connected to your site, tested, handed over.
-              </p>
-              <ul class="service-card__list">
-                <li>Platform setup and configuration</li>
-                <li>Integration into existing or new website</li>
-                <li>Recurring membership or single-session booking</li>
-                <li>Short documentation so you can manage it</li>
-              </ul>
-              <div class="service-card__tiers">
-                <div class="service-card__tier">
-                  <span class="service-card__tier-name">Cal.com (individual appointments)</span>
-                  <span class="service-card__tier-price">from €300</span>
-                </div>
-                <div class="service-card__tier">
-                  <span class="service-card__tier-name">Momoyoga (classes and memberships)</span>
-                  <span class="service-card__tier-price">from €400</span>
-                </div>
+              <div class="service-card__cta-row">
+                <a href="contact.html" class="service-card__cta">Let's talk about a chatbot</a>
+                <button class="service-card__cta service-card__cta--frieda" onclick="window.openFrieda && window.openFrieda()">
+                  Meet my chatbot Frieda ✨
+                </button>
               </div>
-              <p class="service-card__third-party">Client pays directly: Cal.com free or €12/mo, Momoyoga Plus €59&ndash;79/mo for recurring memberships.</p>
-              <a href="contact.html" class="service-card__cta">Let's talk about your booking setup</a>
             </div>
           </article>
 
           <!-- Video editing -->
-          <article class="service-card service-card--expanded fade-up stagger-6" id="video-editing">
+          <article class="service-card service-card--expanded fade-up stagger-5" id="video-editing">
             <div class="service-card__image">
-              <img src="assets/midjourney/mj-chatbot-extra.png" alt="Video editing" loading="lazy" width="600" height="338">
+              <img src="assets/midjourney/video.png" alt="Video editing" loading="lazy" width="600" height="338">
             </div>
             <div class="service-card__body">
               <span class="service-card__subtitle">Video Editing</span>
@@ -280,6 +258,33 @@
             </div>
           </article>
 
+          <!-- Automations -->
+          <article class="service-card service-card--expanded fade-up stagger-6" id="automations">
+            <div class="service-card__image">
+              <img src="assets/midjourney/automations.png" alt="Automations" loading="lazy" width="600" height="338">
+            </div>
+            <div class="service-card__body">
+              <span class="service-card__subtitle">Automations</span>
+              <h2 class="service-card__title">The background work that runs while you focus on clients</h2>
+              <p class="service-card__desc">
+                Email sequences, tool integrations, payment triggers. The connections between your tools that save you hours every month.
+              </p>
+              <ul class="service-card__list">
+                <li>Email welcome and onboarding sequences</li>
+                <li>Tool integrations via Zapier or Make</li>
+                <li>Payment confirmation and membership access triggers</li>
+                <li>Short documentation so you know what's running</li>
+              </ul>
+              <div class="service-card__tiers">
+                <div class="service-card__tier">
+                  <span class="service-card__tier-name">Automation setup (project-based)</span>
+                  <span class="service-card__tier-price">from €300</span>
+                </div>
+              </div>
+              <a href="contact.html" class="service-card__cta">Let's talk about your automations</a>
+            </div>
+          </article>
+
         </div>
       </div>
     </section>
@@ -292,8 +297,7 @@
           <h2 class="retainer-section__title" id="retainer-heading">Tech VA Retainer</h2>
           <p class="retainer-section__intro">
             Your digital back-end, kept running every month. Website updates, platform tweaks,
-            automations, chatbot updates. Fixed scope, fixed cost, minimum 3 months.
-            No "can you just also." Clean tasks, clean delivery.
+            automations, chatbot updates.
           </p>
 
           <div class="retainer-cards">
@@ -301,7 +305,7 @@
             <div class="retainer-card fade-up stagger-1">
               <span class="retainer-card__tier">Light</span>
               <div class="retainer-card__price">€200 <span>/ month</span></div>
-              <div class="retainer-card__term">Up to 3 tasks per month. Minimum 3 months.</div>
+              <div class="retainer-card__term">Three deliverables per month. Minimum 3 months.</div>
               <ul class="retainer-card__list">
                 <li>Website kept technically current</li>
                 <li>Small fixes and content updates</li>
@@ -313,7 +317,7 @@
             <div class="retainer-card retainer-card--core fade-up stagger-2">
               <span class="retainer-card__tier">Core</span>
               <div class="retainer-card__price">€300 <span>/ month</span></div>
-              <div class="retainer-card__term">Up to 6 tasks per month. Priority. Minimum 3 months.</div>
+              <div class="retainer-card__term">Six deliverables per month. Priority. Minimum 3 months.</div>
               <ul class="retainer-card__list">
                 <li>Everything in Light, plus priority response</li>
                 <li>New content uploaded and managed</li>
@@ -342,7 +346,7 @@
     <!-- PORTFOLIO REFERENCE -->
     <div class="portfolio-link-row fade-up">
       <div class="container">
-        <p>Want to see what the work actually looks like? <a href="index.html#portfolio-heading">See recent projects</a> on the homepage.</p>
+        <p>Want to see what the work actually looks like? <a href="index.html#work">See recent projects</a> on the homepage.</p>
       </div>
     </div>
 
@@ -362,13 +366,15 @@
     <section class="frieda-prompt" aria-label="Ask Frieda">
       <div class="container">
         <p class="frieda-prompt__text">
-          Not sure which service fits? Ask Frieda. ✨
+          Not sure which service fits?
         </p>
         <div class="frieda-prompt__links">
-          <a href="https://calendar.app.google/WKhMs5XL1DeaccdK6" class="btn-primary" target="_blank" rel="noopener">
+          <button class="btn-primary" onclick="window.openFrieda && window.openFrieda()">
+            Ask Frieda ✨
+          </button>
+          <a href="https://calendar.app.google/WKhMs5XL1DeaccdK6" class="btn-secondary" target="_blank" rel="noopener">
             Book a discovery call
           </a>
-          <a href="contact.html" class="btn-secondary">Send a message</a>
         </div>
       </div>
     </section>

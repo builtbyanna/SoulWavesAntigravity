@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="../css/global.css">
   <link rel="stylesheet" href="../css/components.css">
   <link rel="stylesheet" href="../css/contact.css">
+  <link rel="stylesheet" href="../css/homepage.css">
   <link rel="stylesheet" href="../css/frieda.css">
 </head>
 <body>
@@ -18,24 +19,28 @@
   <a href="#main" class="skip-nav">Zum Hauptinhalt springen</a>
 
   <!-- NAV -->
-  <header class="sw-nav" role="banner">
+  <header class="sw-nav sw-nav--hero-dark" role="banner">
     <nav class="sw-nav__inner" aria-label="Hauptnavigation">
-      <a href="index.html" class="sw-nav__logo" aria-label="Soul Waves Startseite">
-        <img src="../assets/NewLogoTransparent.svg" alt="Soul Waves" width="120" height="38">
+      <a href="../index.html#hero" class="sw-nav__logo" aria-label="Soul Waves Startseite">
+        <img src="../assets/NewLogoTransparent.svg" alt="Soul Waves" width="340" height="106">
       </a>
       <ul class="sw-nav__links">
-        <li><a href="services.html">Leistungen</a></li>
-        <li><a href="about.html">Über mich</a></li>
-        <li><a href="contact.html" class="active">Kontakt</a></li>
+        <li><a href="../index.html#services">Leistungen</a></li>
+        <li><a href="../index.html#process">Ablauf</a></li>
+        <li><a href="../index.html#about">Über mich</a></li>
+        <li><a href="../index.html#work">Meine Projekte</a></li>
+        <li><a href="../index.html#contact">Kontakt</a></li>
       </ul>
       <div class="sw-nav__right">
-        <div class="sw-nav__lang">
-          <a href="../contact.html" data-lang="en">EN</a>
+        <div class="sw-nav__lang" aria-label="Sprache">
+          <a href="../index.html" data-lang="en">EN</a>
           <span class="sw-nav__lang-sep" aria-hidden="true">|</span>
-          <a href="contact.html" data-lang="de" class="active">DE</a>
+          <a href="index.html" data-lang="de" class="active">DE</a>
         </div>
-        <a href="https://calendar.app.google/WKhMs5XL1DeaccdK6" class="btn-primary" target="_blank" rel="noopener">Gespräch vereinbaren</a>
-        <button class="sw-nav__hamburger" aria-label="Menü öffnen" aria-expanded="false" aria-controls="mobile-menu">
+        <a href="https://calendar.app.google/WKhMs5XL1DeaccdK6" class="btn-primary" target="_blank" rel="noopener">
+          Lass uns reden
+        </a>
+        <button class="sw-nav__hamburger" aria-label="Menu öffnen" aria-expanded="false" aria-controls="mobile-menu">
           <span></span><span></span><span></span>
         </button>
       </div>
@@ -43,14 +48,16 @@
   </header>
 
   <div class="sw-nav__mobile-menu" id="mobile-menu" role="dialog" aria-modal="true" aria-label="Navigationsmenü">
-    <button class="sw-nav__mobile-close" aria-label="Menü schließen">&times;</button>
-    <a href="services.html">Leistungen</a>
-    <a href="about.html">Über mich</a>
-    <a href="contact.html">Kontakt</a>
-    <a href="https://calendar.app.google/WKhMs5XL1DeaccdK6" class="btn-primary" target="_blank" rel="noopener">Gespräch vereinbaren</a>
+    <button class="sw-nav__mobile-close" aria-label="Menu schließen">&times;</button>
+    <a href="../index.html#services">Leistungen</a>
+    <a href="../index.html#process">Ablauf</a>
+    <a href="../index.html#about">Über mich</a>
+    <a href="../index.html#work">Meine Projekte</a>
+    <a href="../index.html#contact">Kontakt</a>
+    <a href="https://calendar.app.google/WKhMs5XL1DeaccdK6" class="btn-primary" target="_blank" rel="noopener">Lass uns reden</a>
     <div class="sw-nav__mobile-lang">
-      <a href="../contact.html" data-lang="en">EN</a>
-      <a href="contact.html" data-lang="de">DE</a>
+      <a href="../index.html" data-lang="en">EN</a>
+      <a href="index.html" data-lang="de">DE</a>
     </div>
   </div>
 

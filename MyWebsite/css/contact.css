@@ -4,6 +4,7 @@
 
 .contact-hero {
   padding: 8rem 0 4rem;
+  padding-bottom: 4rem;
   background: var(--sw-cream);
   border-bottom: 1px solid var(--sw-sand);
 }
@@ -15,6 +16,7 @@
   line-height: 1.2;
   margin-bottom: 0.875rem;
   max-width: 560px;
+  text-align: center;
 }
 
 .contact-hero__sub {
@@ -23,6 +25,7 @@
   opacity: 0.7;
   max-width: 480px;
   line-height: 1.7;
+  text-align: center;
 }
 
 /* ---- Primary booking block ---- */
@@ -34,7 +37,7 @@
 
 .contact-book__layout {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1.2fr;
   gap: 5rem;
   align-items: start;
 }
@@ -46,7 +49,7 @@
   text-transform: uppercase;
   color: var(--sw-copper);
   display: block;
-  margin-bottom: 1.25rem;
+  margin-bottom: 1.5rem;
 }
 
 .contact-book__voice {
@@ -54,7 +57,7 @@
   color: var(--sw-brown);
   opacity: 0.8;
   line-height: 1.75;
-  margin-bottom: 2rem;
+  margin-bottom: 2.5rem;
   max-width: 420px;
 }
 
@@ -72,11 +75,19 @@
   text-underline-offset: 2px;
 }
 
+.contact-book__image {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  object-position: center 20%;
+  border-radius: 16px;
+}
+
 /* ---- Contact form ---- */
 
 .contact-form-wrap {
   background: rgba(230, 204, 178, 0.18);
-  border: 1px solid var(--sw-sand);
+  border: 1px solid rgba(197, 120, 60, 0.2);
   border-radius: 10px;
   padding: 2.5rem;
 }
@@ -91,7 +102,7 @@
 .contact-form {
   display: flex;
   flex-direction: column;
-  gap: 1.25rem;
+  gap: 1.5rem;
 }
 
 .form-field {
@@ -212,7 +223,7 @@
   width: 38px;
   height: 38px;
   border-radius: 50%;
-  border: 1px solid var(--sw-sand);
+  border: 1px solid rgba(197, 120, 60, 0.2);
   color: var(--sw-brown);
   text-decoration: none;
   transition: border-color 0.2s, color 0.2s;

@@ -59,6 +59,9 @@
       portfolio: [
         `The portfolio includes Anja Bodenstein's yoga teacher platform ([anja-bodenstein.de](https://anja-bodenstein.de)) — and honestly, the site you're on right now is the primary proof of craft. ✨\n\n[Talk to Anna](${BOOK}) about your project.`,
       ],
+      digitalfoerderung: [
+        `Yes, this is real and worth knowing about. ✨\n\n**Austria (KMU.DIGITAL / aws):** Small and medium businesses can get 50–75% of digital project costs covered. Websites, e-commerce, booking systems, and automation tools all qualify. Applications go through WKO or aws (Austria Wirtschaftsservice).\n\n**Germany (go-digital):** Up to 50% subsidy on qualifying digital projects through authorised consulting firms.\n\nAnna can help you figure out if your project qualifies and what documentation you'd need. [Book a call](${BOOK}) and ask about it directly — she's helped Austrian clients apply for this.`,
+      ],
       real_person: [
         `I'm Frieda. Real enough to know Anna's booking link by heart. ✨ [Book here.](${BOOK})`,
       ],
@@ -125,6 +128,9 @@
       ],
       portfolio: [
         `Das Portfolio umfasst Anja Bodensteins Yoga-Lehrerinnen-Plattform ([anja-bodenstein.de](https://anja-bodenstein.de)) — und ehrlich: die Website, auf der du gerade bist, ist der Hauptbeweis für die Arbeit. ✨\n\n[Mit Anna reden.](${BOOK})`,
+      ],
+      digitalfoerderung: [
+        `Ja, das ist real und es lohnt sich zu wissen. ✨\n\n**Österreich (KMU.DIGITAL / aws):** Klein- und Mittelbetriebe können 50–75 % der Kosten für Digitalisierungsprojekte fördern lassen. Websites, Webshops, Buchungssysteme und Automatisierungstools sind förderfähig. Anträge über WKO oder aws (Austria Wirtschaftsservice).\n\n**Deutschland (go-digital):** Bis zu 50 % Förderung für qualifizierende digitale Projekte über autorisierte Beratungsunternehmen.\n\nAnna kann dir helfen, herauszufinden, ob dein Projekt förderfähig ist. [Termin buchen](${BOOK}) und direkt nachfragen.`,
       ],
       real_person: [
         `Ich bin Frieda. Real genug, um Annas Buchungslink auswendig zu kennen. ✨ [Hier buchen.](${BOOK})`,
@@ -218,6 +224,10 @@
     // What's included
     if (/what'?s? included|what do (i|you) get|what'?s? in (the |a )?package/i.test(m) ||
         /was ist enthalten|was bekomm(e|t) ich|leistungsumfang/i.test(m)) return 'website_includes';
+
+    // Digitalförderung / subsidies
+    if (/digital.?f[öo]rderung|f[öo]rderung|subsid|kmu.?digital|go-?digital|aws.?(f[öo]rderung|digital)|grant|funding/i.test(m) ||
+        /f[öo]rderung|subvention|kmu.?digital|go.?digital|zuschuss|förderantrag/i.test(m)) return 'digitalfoerderung';
 
     // Portfolio
     if (/portfolio|examples?|past work|previous (work|client)|case stud/i.test(m) ||
@@ -475,5 +485,10 @@
   } else {
     init();
   }
+
+  // Expose for external "Meet Frieda" buttons
+  window.openFrieda = function () {
+    if (document.getElementById('frieda-panel')) openWidget();
+  };
 
 })();

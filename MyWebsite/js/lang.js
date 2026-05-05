@@ -19,21 +19,6 @@ function initLangSwitcher() {
     el.classList.toggle('active', lang === (isDE ? 'de' : 'en'));
   });
 
-  // Build DE/EN counterpart link for the switcher
-  document.querySelectorAll('.sw-nav__lang a, .sw-nav__mobile-lang a').forEach(link => {
-    const lang = link.getAttribute('data-lang');
-    if (!lang) return;
-
-    if (lang === 'de' && !isDE) {
-      // On EN page: link to DE equivalent
-      const dePath = '/de' + (path === '/' ? '/index.html' : path);
-      link.setAttribute('href', dePath);
-    } else if (lang === 'en' && isDE) {
-      // On DE page: link to EN equivalent
-      const enPath = path.replace('/de/', '/').replace('/de', '/');
-      link.setAttribute('href', enPath || '/index.html');
-    }
-  });
 }
 
 document.addEventListener('DOMContentLoaded', initLangSwitcher);

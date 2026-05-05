@@ -33,6 +33,22 @@ function initScrollAnimations() {
   document.querySelectorAll('.fade-up, .slide-left, .slide-right').forEach(el => {
     observer.observe(el);
   });
+
+  const dividerObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          dividerObserver.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.5 }
+  );
+
+  document.querySelectorAll('.section-divider').forEach(el => {
+    dividerObserver.observe(el);
+  });
 }
 
 // ---- Hero elements animate in on load ----
@@ -40,20 +56,22 @@ function initScrollAnimations() {
 function initHeroAnimation() {
   const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
+  const eyebrow  = document.querySelector('.hero__eyebrow');
   const headline = document.querySelector('.hero__headline');
   const subline  = document.querySelector('.hero__subline');
   const cta      = document.querySelector('.hero__cta-wrap');
   const photo    = document.querySelector('.hero__photo-wrap');
 
   if (prefersReduced) {
-    [headline, subline, cta, photo].forEach(el => el && el.classList.add('visible'));
+    [eyebrow, headline, subline, cta, photo].forEach(el => el && el.classList.add('visible'));
     return;
   }
 
-  if (headline) setTimeout(() => headline.classList.add('visible'), 100);
-  if (subline)  setTimeout(() => subline.classList.add('visible'),  320);
-  if (cta)      setTimeout(() => cta.classList.add('visible'),      520);
-  if (photo)    setTimeout(() => photo.classList.add('visible'),    420);
+  if (eyebrow)  setTimeout(() => eyebrow.classList.add('visible'),   50);
+  if (headline) setTimeout(() => headline.classList.add('visible'),  200);
+  if (subline)  setTimeout(() => subline.classList.add('visible'),   380);
+  if (cta)      setTimeout(() => cta.classList.add('visible'),       560);
+  if (photo)    setTimeout(() => photo.classList.add('visible'),     300);
 }
 
 // ---- Ken Burns: pause for prefers-reduced-motion ----
@@ -108,11 +126,23 @@ function initParallax() {
   window.addEventListener('scroll', onScroll, { passive: true });
 }
 
+// ---- Scroll Progress Bar ----
+
+function initScrollProgress() {
+  const bar = document.getElementById('scroll-progress');
+  if (!bar) return;
+
+  window.addEventListener('scroll', () => {
+    const pct = (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100;
+    bar.style.width = Math.min(100, pct) + '%';
+  }, { passive: true });
+}
+
 // ---- Desaturation-to-color reveal on scroll ----
 // Handles both the standalone about.html and the inline about section on index.html
 
 function initDesaturationReveal() {
-  const selectors = ['.about-before__photo img', '.about-inline__prisonguard'];
+  const selectors = ['.about-before__photo img', '.about-inline__prisonguard', '.about-section__prisonguard'];
   const photo = selectors.reduce((found, sel) => found || document.querySelector(sel), null);
   if (!photo) return;
 
@@ -226,7 +256,7 @@ function initNavScroll() {
   if (!nav) return;
 
   function update() {
-    nav.classList.toggle('sw-nav--scrolled', window.scrollY > 24);
+    nav.classList.toggle('sw-nav--scrolled', window.scrollY > 80);
   }
 
   window.addEventListener('scroll', update, { passive: true });
@@ -259,9 +289,58 @@ function initTimelineReveal() {
   beats.forEach(beat => observer.observe(beat));
 }
 
+// ---- Button ripple effect ----
+
+function initRipple() {
+  document.querySelectorAll('.btn-primary, .btn-secondary').forEach(btn => {
+    btn.addEventListener('click', function (e) {
+      const rect = this.getBoundingClientRect();
+      const size = Math.max(rect.width, rect.height);
+      const x = e.clientX - rect.left - size / 2;
+      const y = e.clientY - rect.top - size / 2;
+      const ripple = document.createElement('span');
+      ripple.classList.add('ripple');
+      ripple.style.cssText = `width:${size}px;height:${size}px;left:${x}px;top:${y}px`;
+      this.appendChild(ripple);
+      ripple.addEventListener('animationend', () => ripple.remove());
+    });
+  });
+}
+
+// ---- Card 3D tilt ----
+
+function initCardTilt() {
+  const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (prefersReduced) return;
+
+  document.querySelectorAll('.service-visual-card, .portfolio-card').forEach(card => {
+    card.addEventListener('mousemove', function (e) {
+      const rect = this.getBoundingClientRect();
+      const cx = rect.left + rect.width / 2;
+      const cy = rect.top + rect.height / 2;
+      const dx = (e.clientX - cx) / (rect.width / 2);
+      const dy = (e.clientY - cy) / (rect.height / 2);
+      const tiltX = -(dy * 2.5);
+      const tiltY = dx * 2.5;
+      this.style.setProperty('--tilt-x', `${tiltX}deg`);
+      this.style.setProperty('--tilt-y', `${tiltY}deg`);
+      this.style.transform = `perspective(1000px) rotateX(${tiltX}deg) rotateY(${tiltY}deg) translateY(-4px)`;
+      this.style.boxShadow = `${-dx * 8}px ${-dy * 8}px 40px rgba(68,20,13,0.15), 0 0 0 1px rgba(197,120,60,0.2)`;
+    });
+
+    card.addEventListener('mouseleave', function () {
+      this.style.transform = '';
+      this.style.boxShadow = '';
+      this.style.setProperty('--tilt-x', '0deg');
+      this.style.setProperty('--tilt-y', '0deg');
+    });
+  });
+}
+
 // ---- Init ----
 
 document.addEventListener('DOMContentLoaded', () => {
+  initScrollProgress();
   initScrollAnimations();
   initHeroAnimation();
   initKenBurns();
@@ -272,4 +351,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initNavScroll();
   initTimelineReveal();
   initAccordion();
+  initRipple();
+  initCardTilt();
 });

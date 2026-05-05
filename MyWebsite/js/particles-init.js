@@ -10,38 +10,38 @@
     fpsLimit: 60,
     particles: {
       number: {
-        value: 38,
+        value: 18,
         density: { enable: false }
       },
       color: {
-        value: ['#C5783C', '#C5783C', '#C5783C', '#FFF8EC']
+        value: ['#FFF8EC', '#FFF8EC', '#C5783C']
       },
       opacity: {
-        value: { min: 0.15, max: 0.45 },
+        value: { min: 0.05, max: 0.2 },
         animation: {
           enable: true,
-          speed: 0.6,
-          minimumValue: 0.1,
+          speed: 0.2,
+          minimumValue: 0.03,
           sync: false
         }
       },
       size: {
-        value: { min: 1.5, max: 3.5 }
+        value: { min: 0.8, max: 1.8 }
       },
       move: {
         enable: true,
         direction: 'top',
-        speed: { min: 0.3, max: 0.9 },
+        speed: 0.03,
         straight: false,
         outModes: { default: 'out' },
         random: true,
-        drift: 0.3
+        drift: 0.05
       },
       twinkle: {
         particles: {
           enable: true,
-          frequency: 0.04,
-          opacity: 0.8
+          frequency: 0.02,
+          opacity: 0.5
         }
       },
       links: { enable: false },
@@ -58,13 +58,13 @@
       {
         maxWidth: 768,
         options: {
-          particles: { number: { value: 18 } }
+          particles: { number: { value: 10 } }
         }
       },
       {
         maxWidth: 480,
         options: {
-          particles: { number: { value: 10 } }
+          particles: { number: { value: 6 } }
         }
       }
     ],
