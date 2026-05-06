@@ -376,7 +376,7 @@
   function buildWidget() {
     const isDE = lang === 'de';
 
-    const triggerText = isDE ? 'Nicht sicher? Frag Frieda.' : 'Not sure? Ask Frieda.';
+    const triggerText = isDE ? 'Frieda herbeirufen ✨' : 'Summon Frieda ✨';
     const chatLabel   = isDE ? 'Chat mit Frieda' : 'Chat with Frieda';
     const statusLine  = isDE ? 'Soul Waves Assistentin' : 'Soul Waves Assistant';
     const closeLabel  = isDE ? 'Chat schließen' : 'Close chat';

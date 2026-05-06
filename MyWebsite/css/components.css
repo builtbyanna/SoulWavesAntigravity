@@ -6,16 +6,6 @@
 
 /* ---- Navigation ---- */
 
-.sw-nav {
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  background: rgba(255, 248, 236, 0.96);
-  border-bottom: 1px solid var(--sw-sand);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-}
-
 .sw-nav__inner {
   display: flex;
   align-items: center;
@@ -32,9 +22,15 @@
 }
 
 .sw-nav__logo img {
-  height: 38px;
-  width: auto;
+  height: auto;
+  width: 180px;
+  max-width: 220px;
   display: block;
+  transition: transform 0.3s ease;
+}
+
+.sw-nav__logo:hover img {
+  transform: scale(1.05);
 }
 
 .sw-nav__links {
