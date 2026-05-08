@@ -115,11 +115,11 @@
 :root {
   --sw-brown: #44140D;
   --sw-cream: #FFF8EC;
-  --sw-red: #8C1C13;
-  --sw-copper: #C5783C;
+  --sw-red: #B38728;
+  --sw-copper: #BF953F;
   --sw-sand: #E6CCB2;
 
-  --sw-copper-hover: #a8622e;
+  --sw-copper-hover: #AA771C;
   --sw-dark: #1A0A0A;
 
   --font-display: 'Great Vibes', cursive;
@@ -197,24 +197,28 @@ img {
 
 .btn-primary {
   display: inline-block;
-  background-color: var(--sw-copper);
-  color: var(--sw-cream);
+  background: linear-gradient(135deg, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C);
+  background-size: 400% 400%;
+  animation: gold-shimmer 15s ease infinite;
+  color: var(--sw-brown);
   font-family: var(--font-body);
   font-weight: 500;
   font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
   padding: 0.75rem 1.75rem;
   border-radius: 7px;
-  border: none;
+  border: 1px solid rgba(68, 20, 13, 0.1);
   cursor: pointer;
   text-decoration: none;
-  transition: background-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+  transition: all 0.3s ease;
 }
 
 .btn-primary:hover {
-  background-color: var(--sw-copper-hover);
-  color: var(--sw-cream);
-  box-shadow: 0 0 20px rgba(197, 120, 60, 0.4);
   transform: scale(1.02);
+  color: #44140D;
+  border-color: transparent !important;
+  box-shadow: 0 0 25px rgba(191, 149, 63, 0.4);
 }
 
 .btn-secondary {
@@ -224,6 +228,8 @@ img {
   font-family: var(--font-body);
   font-weight: 500;
   font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
   padding: 0.7rem 1.6rem;
   border-radius: 7px;
   border: 1.5px solid var(--sw-copper);
@@ -426,4 +432,10 @@ img {
     animation: none;
     background-image: none;
   }
+}
+
+@keyframes gold-shimmer {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }

@@ -85,15 +85,14 @@ function initKenBurns() {
   }
 }
 
-// ---- Parallax: coconut photo + cinematic bg ----
+// ---- Parallax: cinematic bg ----
 
 function initParallax() {
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
 
-  const coconutWrap = document.querySelector('.hero__photo-wrap');
   const cinematicBg = document.querySelector('.cinematic__bg');
 
-  if (!coconutWrap && !cinematicBg) return;
+  if (!cinematicBg) return;
 
   let ticking = false;
 
@@ -101,10 +100,6 @@ function initParallax() {
     if (!ticking) {
       requestAnimationFrame(() => {
         const scrollY = window.scrollY;
-
-        if (coconutWrap) {
-          coconutWrap.style.transform = `translateY(${scrollY * 0.10}px)`;
-        }
 
         if (cinematicBg) {
           const section = cinematicBg.closest('.cinematic');
@@ -337,6 +332,61 @@ function initCardTilt() {
   });
 }
 
+// ---- Pull-quote carousel (auto-play + prev/next arrows) ----
+
+function initPullQuoteCarousel() {
+  const track = document.querySelector('.testimonial-carousel__track');
+  if (!track) return;
+  const quotes = track.querySelectorAll('.pull-quote--inline');
+  if (quotes.length < 2) return;
+
+  const prevBtn = document.querySelector('.carousel-prev');
+  const nextBtn = document.querySelector('.carousel-next');
+
+  let current = 0;
+  let timer;
+
+  function showQuote(index) {
+    quotes.forEach((q, i) => {
+      q.style.opacity = i === index ? '1' : '0';
+      q.style.pointerEvents = i === index ? '' : 'none';
+    });
+  }
+
+  function go(dir) {
+    current = (current + dir + quotes.length) % quotes.length;
+    showQuote(current);
+    clearInterval(timer);
+    timer = setInterval(() => go(1), 6000);
+  }
+
+  if (prevBtn) prevBtn.addEventListener('click', () => go(-1));
+  if (nextBtn) nextBtn.addEventListener('click', () => go(1));
+
+  showQuote(0);
+  timer = setInterval(() => go(1), 6000);
+}
+
+// ---- About section: scroll-reactive spotlight parallax ----
+
+function initAboutShimmer() {
+  const section = document.getElementById('about');
+  if (!section) return;
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+  function update() {
+    const rect = section.getBoundingClientRect();
+    const total = window.innerHeight + section.offsetHeight;
+    const progress = Math.max(0, Math.min(1, (window.innerHeight - rect.top) / total));
+    // diagonal stripe drifts up by max 80px as user scrolls through the section
+    const offset = -(progress * 80);
+    section.style.setProperty('--spotlight-offset', `${offset.toFixed(1)}px`);
+  }
+
+  window.addEventListener('scroll', update, { passive: true });
+  update();
+}
+
 // ---- Init ----
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -353,4 +403,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initAccordion();
   initRipple();
   initCardTilt();
+  initPullQuoteCarousel();
+  initAboutShimmer();
 });
