@@ -242,7 +242,7 @@
 .sw-footer__logo img {
   height: 36px;
   width: auto;
-  filter: brightness(0) invert(1) sepia(1) saturate(1) hue-rotate(20deg) brightness(1.5) !important;
+  filter: brightness(0) invert(1) sepia(0.4) saturate(2) brightness(1.8) !important;
 }
 
 .sw-footer__tagline {

@@ -198,7 +198,7 @@ img {
 img[src*='whatsapp'],
 .contact-inline__link svg,
 .sw-footer__contact-item img {
-  filter: sepia(1) saturate(8) hue-rotate(15deg) brightness(1.2) !important;
+  filter: brightness(0) invert(1) sepia(1) saturate(3) hue-rotate(15deg) brightness(1.1) !important;
 }
 
 /* ============================================================
