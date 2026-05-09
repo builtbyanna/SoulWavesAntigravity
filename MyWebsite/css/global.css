@@ -192,6 +192,16 @@ img {
 }
 
 /* ============================================================
+   Golden Icon Rule — applies to all brand icons sitewide
+   ============================================================ */
+
+img[src*='whatsapp'],
+.contact-inline__link svg,
+.sw-footer__contact-item img {
+  filter: sepia(1) saturate(8) hue-rotate(15deg) brightness(1.2) !important;
+}
+
+/* ============================================================
    CTA Buttons
    ============================================================ */
 

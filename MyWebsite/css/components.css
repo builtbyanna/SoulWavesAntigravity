@@ -227,7 +227,7 @@
 /* ---- Footer ---- */
 
 .sw-footer {
-  background: var(--sw-brown);
+  background: #1A0A0A;
   color: var(--sw-cream);
   padding: 4.5rem 0 2rem;
 }
@@ -242,8 +242,7 @@
 .sw-footer__logo img {
   height: 36px;
   width: auto;
-  filter: brightness(0) invert(1);
-  opacity: 0.9;
+  filter: brightness(0) invert(1) sepia(1) saturate(1) hue-rotate(20deg) brightness(1.5) !important;
 }
 
 .sw-footer__tagline {
