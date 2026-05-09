@@ -1101,6 +1101,49 @@ main .hero {
   color: var(--sw-copper);
 }
 
+/* WhatsApp icon — gold shimmer via mask-image over animated gradient */
+.contact-inline__link--wa {
+  padding-bottom: 0;
+}
+
+.contact-inline__link--wa::after {
+  display: none;
+}
+
+.contact-inline__link--wa:hover {
+  color: inherit;
+}
+
+.wa-icon {
+  display: inline-block;
+  width: 2.5rem;
+  height: 2.5rem;
+  vertical-align: middle;
+  background: linear-gradient(135deg, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C);
+  background-size: 400% 400%;
+  animation: gold-shimmer 5s ease infinite;
+  -webkit-mask-image: url('../assets/whatsapp-soulwaves.svg');
+  mask-image: url('../assets/whatsapp-soulwaves.svg');
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-position: center;
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.contact-inline__link--wa:hover .wa-icon {
+  transform: scale(1.06);
+  filter: brightness(1.15) drop-shadow(0 0 10px rgba(191, 149, 63, 0.7));
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .wa-icon {
+    animation: none;
+  }
+}
+
 .contact-inline__photo {
   margin-top: 2rem;
   border-radius: 12px;

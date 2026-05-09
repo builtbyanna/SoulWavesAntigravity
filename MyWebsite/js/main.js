@@ -394,21 +394,28 @@ function initAboutShimmer() {
 
 // ---- Copy to clipboard ----
 
-function showCopyToast(msg) {
+function showCopyToast(anchorEl) {
   const existing = document.querySelector('.copy-toast');
   if (existing) existing.remove();
 
-  const toast = document.createElement('div');
+  const toast = document.createElement('span');
   toast.className = 'copy-toast';
-  toast.textContent = msg || 'Kopiert!';
+  toast.textContent = 'Kopiert!';
   document.body.appendChild(toast);
+
+  const rect = anchorEl.getBoundingClientRect();
+  const tw = toast.offsetWidth;
+  let left = rect.right + 8;
+  if (left + tw > window.innerWidth - 8) left = rect.left - tw - 8;
+  toast.style.top = (rect.top + (rect.height - toast.offsetHeight) / 2) + 'px';
+  toast.style.left = left + 'px';
 
   requestAnimationFrame(() => toast.classList.add('copy-toast--show'));
 
   setTimeout(() => {
     toast.classList.remove('copy-toast--show');
-    setTimeout(() => toast.remove(), 300);
-  }, 2000);
+    setTimeout(() => toast.remove(), 200);
+  }, 1500);
 }
 
 function initCopyToClipboard() {
@@ -416,9 +423,10 @@ function initCopyToClipboard() {
     el.addEventListener('click', function (e) {
       e.preventDefault();
       const text = this.dataset.copy;
+      const anchor = this;
 
       if (navigator.clipboard) {
-        navigator.clipboard.writeText(text).then(() => showCopyToast());
+        navigator.clipboard.writeText(text).then(() => showCopyToast(anchor));
       } else {
         const ta = document.createElement('textarea');
         ta.value = text;
@@ -427,7 +435,7 @@ function initCopyToClipboard() {
         ta.select();
         document.execCommand('copy');
         document.body.removeChild(ta);
-        showCopyToast();
+        showCopyToast(anchor);
       }
     });
   });

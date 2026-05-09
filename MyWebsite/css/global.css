@@ -447,22 +447,20 @@ img {
 
 .copy-toast {
   position: fixed;
-  bottom: 2rem;
-  left: 50%;
-  transform: translateX(-50%) translateY(0.5rem);
-  background: var(--sw-brown);
-  color: var(--sw-cream);
+  background: transparent;
+  color: var(--sw-copper);
   font-family: var(--font-body);
-  font-size: 0.875rem;
-  padding: 0.5rem 1.25rem;
-  border-radius: 6px;
+  font-size: 0.75rem;
+  font-weight: 400;
   opacity: 0;
-  transition: opacity 0.25s ease, transform 0.25s ease;
+  transition: opacity 0.2s ease, transform 0.15s ease;
   z-index: 9999;
   pointer-events: none;
+  white-space: nowrap;
+  transform: translateX(-4px);
 }
 
 .copy-toast--show {
   opacity: 1;
-  transform: translateX(-50%) translateY(0);
+  transform: translateX(0);
 }
