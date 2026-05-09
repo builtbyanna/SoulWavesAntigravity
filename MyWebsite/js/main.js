@@ -367,24 +367,70 @@ function initPullQuoteCarousel() {
   timer = setInterval(() => go(1), 6000);
 }
 
-// ---- About section: scroll-reactive spotlight parallax ----
+// ---- Dark sections: scroll-reactive diagonal shimmer parallax ----
 
 function initAboutShimmer() {
-  const section = document.getElementById('about');
-  if (!section) return;
+  const sections = ['about', 'contact']
+    .map(id => document.getElementById(id))
+    .filter(Boolean);
+  if (!sections.length) return;
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
 
-  function update() {
+  function updateSection(section) {
     const rect = section.getBoundingClientRect();
     const total = window.innerHeight + section.offsetHeight;
     const progress = Math.max(0, Math.min(1, (window.innerHeight - rect.top) / total));
-    // diagonal stripe drifts up by max 80px as user scrolls through the section
     const offset = -(progress * 80);
     section.style.setProperty('--spotlight-offset', `${offset.toFixed(1)}px`);
   }
 
+  function update() {
+    sections.forEach(updateSection);
+  }
+
   window.addEventListener('scroll', update, { passive: true });
   update();
+}
+
+// ---- Copy to clipboard ----
+
+function showCopyToast(msg) {
+  const existing = document.querySelector('.copy-toast');
+  if (existing) existing.remove();
+
+  const toast = document.createElement('div');
+  toast.className = 'copy-toast';
+  toast.textContent = msg || 'Kopiert!';
+  document.body.appendChild(toast);
+
+  requestAnimationFrame(() => toast.classList.add('copy-toast--show'));
+
+  setTimeout(() => {
+    toast.classList.remove('copy-toast--show');
+    setTimeout(() => toast.remove(), 300);
+  }, 2000);
+}
+
+function initCopyToClipboard() {
+  document.querySelectorAll('[data-copy]').forEach(el => {
+    el.addEventListener('click', function (e) {
+      e.preventDefault();
+      const text = this.dataset.copy;
+
+      if (navigator.clipboard) {
+        navigator.clipboard.writeText(text).then(() => showCopyToast());
+      } else {
+        const ta = document.createElement('textarea');
+        ta.value = text;
+        ta.style.cssText = 'position:fixed;opacity:0;top:0;left:0';
+        document.body.appendChild(ta);
+        ta.select();
+        document.execCommand('copy');
+        document.body.removeChild(ta);
+        showCopyToast();
+      }
+    });
+  });
 }
 
 // ---- Init ----
@@ -405,4 +451,5 @@ document.addEventListener('DOMContentLoaded', () => {
   initCardTilt();
   initPullQuoteCarousel();
   initAboutShimmer();
+  initCopyToClipboard();
 });

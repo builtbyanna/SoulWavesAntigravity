@@ -440,3 +440,29 @@ img {
   50%  { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
 }
+
+/* ============================================================
+   Copy-to-clipboard toast
+   ============================================================ */
+
+.copy-toast {
+  position: fixed;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%) translateY(0.5rem);
+  background: var(--sw-brown);
+  color: var(--sw-cream);
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  padding: 0.5rem 1.25rem;
+  border-radius: 6px;
+  opacity: 0;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+  z-index: 9999;
+  pointer-events: none;
+}
+
+.copy-toast--show {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
