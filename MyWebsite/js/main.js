@@ -400,7 +400,8 @@ function showCopyToast(anchorEl) {
 
   const toast = document.createElement('span');
   toast.className = 'copy-toast';
-  toast.textContent = 'Kopiert!';
+  const lang = document.documentElement.lang || 'en';
+  toast.textContent = lang.startsWith('de') ? 'Kopiert!' : 'Copied!';
   document.body.appendChild(toast);
 
   const rect = anchorEl.getBoundingClientRect();
