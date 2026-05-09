@@ -239,10 +239,11 @@
   margin-bottom: 3rem;
 }
 
-.sw-footer__logo img {
+img.sw-footer__logo {
   height: 36px;
   width: auto;
-  filter: brightness(0) invert(1) sepia(0.4) saturate(2) brightness(1.8) !important;
+  filter: brightness(0) invert(1) sepia(0.5) brightness(1.5) !important;
+  opacity: 1 !important;
 }
 
 .sw-footer__tagline {
