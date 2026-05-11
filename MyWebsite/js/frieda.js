@@ -60,7 +60,7 @@
         `The portfolio includes Anja Bodenstein's yoga teacher platform ([anja-bodenstein.de](https://anja-bodenstein.de)) — and honestly, the site you're on right now is the primary proof of craft. ✨\n\n[Talk to Anna](${BOOK}) about your project.`,
       ],
       digitalfoerderung: [
-        `Yes, this is real and worth knowing about. ✨\n\n**Austria (KMU.DIGITAL / aws):** Small and medium businesses can get 50–75% of digital project costs covered. Websites, e-commerce, booking systems, and automation tools all qualify. Applications go through WKO or aws (Austria Wirtschaftsservice).\n\n**Germany (go-digital):** Up to 50% subsidy on qualifying digital projects through authorised consulting firms.\n\nAnna can help you figure out if your project qualifies and what documentation you'd need. [Book a call](${BOOK}) and ask about it directly — she's helped Austrian clients apply for this.`,
+        `Yes, these programs are real and worth knowing about. ✨\n\n**Austria (KMU.DIGITAL):** Runs through WKO and AWS (Austria Wirtschaftsservice), specifically for small and medium businesses. Up to €12,000 in grants. Websites, e-commerce, booking systems, and automation tools all qualify.\n\nOne important thing: the budget for the implementation grant track is currently exhausted. The program is real and established, but paused for now. It typically reopens with new budget.\n\n**Germany:** The federal "go-digital" program was shut down on 31 December 2024. What is still active are strong state-level programs:\n\n• Bavaria (Digitalbonus): up to €30,000, up to 50%\n• NRW (MID vouchers): up to €15,000, up to 70%\n• Saxony (EFRE): up to €36,000, up to 60%\n• Hessen (DIGI-Zuschuss): up to €10,000, 50%\n• Saarland (DigitalInvest KMU): up to €12,500, up to 50%\n• Thuringia (Digitalbonus): up to €15,000, 50%\n• Schleswig-Holstein (DKU): up to €50,000, 50%\n• Baden-Württemberg (Digitalisierungsprämie Plus): €3,000 direct subsidy\n\n[Book a call](${BOOK}) and ask Anna directly whether your project qualifies.`,
       ],
       real_person: [
         `I'm Frieda. Real enough to know Anna's booking link by heart. ✨ [Book here.](${BOOK})`,
@@ -130,7 +130,7 @@
         `Das Portfolio umfasst Anja Bodensteins Yoga-Lehrerinnen-Plattform ([anja-bodenstein.de](https://anja-bodenstein.de)) — und ehrlich: die Website, auf der du gerade bist, ist der Hauptbeweis für die Arbeit. ✨\n\n[Mit Anna reden.](${BOOK})`,
       ],
       digitalfoerderung: [
-        `Ja, das ist real und es lohnt sich zu wissen. ✨\n\n**Österreich (KMU.DIGITAL / aws):** Klein- und Mittelbetriebe können 50–75 % der Kosten für Digitalisierungsprojekte fördern lassen. Websites, Webshops, Buchungssysteme und Automatisierungstools sind förderfähig. Anträge über WKO oder aws (Austria Wirtschaftsservice).\n\n**Deutschland (go-digital):** Bis zu 50 % Förderung für qualifizierende digitale Projekte über autorisierte Beratungsunternehmen.\n\nAnna kann dir helfen, herauszufinden, ob dein Projekt förderfähig ist. [Termin buchen](${BOOK}) und direkt nachfragen.`,
+        `Ja, die gibt es wirklich, und sie ist sogar ziemlich gut. ✨\n\n**Österreich (KMU.DIGITAL):** Läuft über WKO und AWS (Austria Wirtschaftsservice), speziell für Klein- und Mittelbetriebe. Bis zu €12.000 Förderung möglich. Websites, Webshops, Buchungssysteme und Automatisierungen sind förderfähig.\n\nWichtig zu wissen: Das Budget für die Umsetzungsförderung ist aktuell ausgeschöpft. Das Programm ist real und etabliert, aber gerade pausiert. Es wird typischerweise mit neuem Budget wieder aufgemacht.\n\n**Deutschland:** Das bundesweite "go-digital" Programm wurde am 31.12.2024 eingestellt. Was aber aktiv ist, sind starke Länderprogramme:\n\n• Bayern (Digitalbonus): bis zu €30.000, bis 50%\n• NRW (MID-Gutscheine): bis zu €15.000, bis 70%\n• Sachsen (EFRE): bis zu €36.000, bis 60%\n• Hessen (DIGI-Zuschuss): bis zu €10.000, 50%\n• Saarland (DigitalInvest KMU): bis zu €12.500, bis 50%\n• Thüringen (Digitalbonus): bis zu €15.000, 50%\n• Schleswig-Holstein (DKU): bis zu €50.000, 50%\n• Baden-Württemberg (Digitalisierungsprämie Plus): €3.000 Direktzuschuss\n\n[Termin buchen](${BOOK}) und Anna direkt fragen, ob dein Projekt förderfähig ist.`,
       ],
       real_person: [
         `Ich bin Frieda. Real genug, um Annas Buchungslink auswendig zu kennen. ✨ [Hier buchen.](${BOOK})`,
@@ -376,7 +376,7 @@
   function buildWidget() {
     const isDE = lang === 'de';
 
-    const triggerText = isDE ? 'Frieda herbeirufen ✨' : 'Summon Frieda ✨';
+    const triggerText = isDE ? 'Frag Frieda ✨' : 'Summon Frieda ✨';
     const chatLabel   = isDE ? 'Chat mit Frieda' : 'Chat with Frieda';
     const statusLine  = isDE ? 'Soul Waves Assistentin' : 'Soul Waves Assistant';
     const closeLabel  = isDE ? 'Chat schließen' : 'Close chat';
@@ -436,6 +436,7 @@
   aria-expanded="false"
   aria-controls="frieda-panel"
   aria-label="${chatLabel}"
+  translate="no"
 >
   <span class="frieda-trigger__sparkle" aria-hidden="true">✨</span>
   <span class="frieda-trigger__text">${triggerText}</span>
