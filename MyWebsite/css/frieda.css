@@ -20,8 +20,10 @@
   display: flex;
   align-items: center;
   gap: 0.45rem;
-  background: var(--sw-copper);
-  color: var(--sw-cream);
+  background: linear-gradient(135deg, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C);
+  background-size: 400% 400%;
+  animation: gold-shimmer 15s ease infinite;
+  color: #44140D;
   font-family: var(--font-mono);
   font-size: 0.8rem;
   line-height: 1.2;
@@ -29,8 +31,8 @@
   border: none;
   border-radius: 100px;
   cursor: pointer;
-  box-shadow: 0 4px 20px rgba(197, 120, 60, 0.35), 0 2px 6px rgba(68, 20, 13, 0.1);
-  transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 4px 20px rgba(191, 149, 63, 0.35), 0 2px 6px rgba(68, 20, 13, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
   white-space: nowrap;
   text-decoration: none;
 }
@@ -47,12 +49,27 @@
 }
 
 .frieda-trigger.active {
-  background: var(--sw-brown);
-  box-shadow: 0 4px 20px rgba(68, 20, 13, 0.25);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  padding: 0;
+  justify-content: center;
+  background: linear-gradient(135deg, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C);
+  background-size: 400% 400%;
+  animation: gold-shimmer 15s ease infinite;
+  box-shadow: 0 4px 20px rgba(191, 149, 63, 0.35), 0 2px 6px rgba(68, 20, 13, 0.1);
+  font-size: 0;
+}
+
+.frieda-trigger.active .frieda-trigger__sparkle {
+  font-size: 1.1rem;
 }
 
 .frieda-trigger.active:hover {
-  background: #5a1c11;
+  background: linear-gradient(135deg, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C);
+  background-size: 400% 400%;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 28px rgba(197, 120, 60, 0.45);
 }
 
 .frieda-trigger__sparkle {

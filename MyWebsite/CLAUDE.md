@@ -60,7 +60,7 @@ Nav: [Logo — links to #hero]  |  What I Build  |  Process  |  About  |  Contac
 1. #hero — headline (Zodiak display), subline, primary CTA, me_coconut.JPG right side, Ken Burns background
 2. #what-i-build — 4 service cards (glass style), pain-point framing, Midjourney visuals, price range, CTA per card
 3. #process — 3 steps: "Reach out / We talk / You get your back-end handled." Shimmer vertical connectors between steps.
-4. #about — "I used to work in a prison." Opening. Prison/pivot story as proof of why you'd trust her, not biography. me_prisonguard.jpeg (full, desaturated). me_lighthouse.jpeg (warm). Testimonial pull-quote.
+4. #about — "I used to work in a prison." Opening. Prison/pivot story as proof of why you'd trust her, not biography. me_prisonguard.jpeg (full, desaturated). me_lighthouse2.jpeg (warm). Testimonial pull-quote.
 5. #work — Portfolio strip: 3 project cards (glass style), client type, tools, one outcome line
 6. #contact — Form (Name, Email, "What are you working on?", "How did you find me?") + booking CTA + anna@soulwavesva.com + WhatsApp
 Footer — Logo, anchor nav, social icons, legal links (Impressum / Datenschutz), copyright
@@ -75,7 +75,7 @@ Footer — Logo, anchor nav, social icons, legal links (Impressum / Datenschutz)
 ## Photos — Exact Placement and Treatment
 - me_coconut.JPG: Hero section, right side. Full image, no clip-path distortion. Clean rounded container (border-radius: 16px). Copper overlay 8%. Parallax on scroll.
 - me_prisonguard.jpeg: About section, "Before" part. Full image, no clip-path. CSS filter: grayscale(70%). Caption: "Before all of this." Reveals to color on scroll.
-- me_lighthouse.jpeg: About section, "Now" part. Full warmth, --sw-copper overlay 12%. Beside copy or offset layout.
+- me_lighthouse2.jpeg: About section, "Now" part. Full warmth, --sw-copper overlay 12%. Beside copy or offset layout.
 - me_beach.JPG: Currently shows mostly sky. Use object-position: center 75% to show her lower in the frame, OR replace with a "feet on beach" photo if Anna provides one.
 All photos: full images, no warping, no odd shapes. Clean containers. Editorial quality. No stock-photo grid.
 
