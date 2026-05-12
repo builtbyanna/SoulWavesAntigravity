@@ -186,7 +186,8 @@ main .hero {
   font-family: var(--font-display);
   font-weight: 300;
   font-size: clamp(3.5rem, 5.5vw, 5rem);
-  line-height: 1.18;
+  line-height: 1.25;
+  padding-top: 0.1em;
   margin-bottom: 0.1rem;
   text-transform: none;
   letter-spacing: 0;
