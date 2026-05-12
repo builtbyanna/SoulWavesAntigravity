@@ -177,7 +177,7 @@ main .hero {
   background: rgba(255, 248, 236, 0.04);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  padding: 1.8rem 2.2rem;
+  padding: 2.45rem 2.2rem 1.15rem;
   border-radius: 12px;
   border: 1px solid rgba(255, 255, 255, 0.1);
 }
@@ -186,8 +186,8 @@ main .hero {
   font-family: var(--font-display);
   font-weight: 300;
   font-size: clamp(3.5rem, 5.5vw, 5rem);
-  line-height: 1.25;
-  margin-bottom: 0.2rem;
+  line-height: 1.18;
+  margin-bottom: 0.1rem;
   text-transform: none;
   letter-spacing: 0;
   background: linear-gradient(115deg, #BF953F 20%, #FCF6BA 48%, #B38728 80%);
@@ -206,8 +206,8 @@ main .hero {
   font-weight: 300 !important;
   font-size: clamp(1.7rem, 3vw, 2.6rem);
   color: #ffffff;
-  line-height: 1.22;
-  margin-bottom: 1.25rem;
+  line-height: 1.18;
+  margin-bottom: 0.95rem;
   text-shadow:
     0 0 20px rgba(26, 10, 10, 0.4),
     0 2px 4px rgba(26, 10, 10, 0.5);
@@ -218,8 +218,8 @@ main .hero {
   font-weight: 300 !important;
   font-size: clamp(1rem, 1.4vw, 1.08rem);
   color: #1A0A0A;
-  line-height: 1.7;
-  margin-bottom: 2.25rem;
+  line-height: 1.62;
+  margin-bottom: 1.65rem;
 }
 
 .hero__cta-wrap {
@@ -731,16 +731,16 @@ main .hero {
   position: relative;
   overflow: hidden;
   border-radius: 12px;
-  min-height: 300px;
+  align-self: stretch;
 }
 
 .about-inline__prisonguard {
-  position: absolute;
+  position: absolute !important;
   inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center top;
+  object-position: center 8%;
   display: block;
   filter: grayscale(70%);
   transition: filter 1.2s ease;
@@ -917,6 +917,11 @@ main .hero {
   .about-inline__before {
     grid-template-columns: 1fr;
     gap: 2rem;
+  }
+
+  .about-inline__prisonguard {
+    position: relative !important;
+    height: auto;
   }
 
   .about-inline__now {
