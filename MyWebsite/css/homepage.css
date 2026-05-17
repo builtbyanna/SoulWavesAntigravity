@@ -1318,7 +1318,7 @@ main .hero {
 }
 
 .section-seam--light-to-dark {
-  height: 80px;
+  height: 72px;
   background: linear-gradient(to bottom,
       var(--sw-cream) 0%,
       var(--sw-cream) 30%,
@@ -1327,7 +1327,7 @@ main .hero {
 }
 
 .section-seam--dark-to-light {
-  height: 80px;
+  height: 72px;
   background: linear-gradient(to bottom, #1A0A0A 0%, var(--sw-cream) 100%);
 }
 

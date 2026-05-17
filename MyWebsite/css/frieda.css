@@ -368,6 +368,103 @@
   }
 }
 
+/* ---- GDPR consent overlay ---- */
+
+.frieda-consent {
+  position: absolute;
+  inset: 0;
+  background: var(--sw-cream, #FFF8EC);
+  z-index: 10;
+  align-items: center;
+  justify-content: center;
+  padding: 1.25rem;
+  border-radius: 16px;
+}
+
+.frieda-consent__box {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  max-height: 100%;
+  overflow-y: auto;
+}
+
+.frieda-consent__title {
+  font-family: 'Tsukimi Rounded', sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--sw-brown, #44140D);
+  margin: 0;
+}
+
+.frieda-consent__body {
+  font-family: 'Courier Prime', monospace;
+  font-size: 0.72rem;
+  line-height: 1.55;
+  color: var(--sw-brown, #44140D);
+  margin: 0;
+  opacity: 0.85;
+}
+
+.frieda-consent__actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 0.25rem;
+}
+
+.frieda-consent__start {
+  background: var(--sw-copper, #C5783C);
+  color: var(--sw-cream, #FFF8EC);
+  border: none;
+  border-radius: 6px;
+  padding: 0.55rem 1rem;
+  font-family: 'Tsukimi Rounded', sans-serif;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.frieda-consent__start:hover {
+  background: var(--sw-red, #8C1C13);
+}
+
+.frieda-consent__privacy {
+  font-family: 'Courier Prime', monospace;
+  font-size: 0.7rem;
+  color: var(--sw-red, #8C1C13);
+  text-align: center;
+  text-decoration: underline;
+  opacity: 0.75;
+}
+
+/* ---- Quick reply buttons ---- */
+
+.frieda-quick-replies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  padding: 0.5rem 0 0.25rem;
+}
+
+.frieda-quick-reply {
+  background: transparent;
+  border: 1px solid var(--sw-copper, #C5783C);
+  color: var(--sw-copper, #C5783C);
+  border-radius: 20px;
+  padding: 0.3rem 0.75rem;
+  font-family: 'Courier Prime', monospace;
+  font-size: 0.72rem;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+  white-space: nowrap;
+}
+
+.frieda-quick-reply:hover {
+  background: var(--sw-copper, #C5783C);
+  color: var(--sw-cream, #FFF8EC);
+}
+
 /* ---- Reduced motion ---- */
 
 @media (prefers-reduced-motion: reduce) {

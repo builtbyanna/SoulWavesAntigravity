@@ -1,0 +1,10 @@
+{
+  "name": "soul-waves",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "@neondatabase/serverless": "^0.10.4",
+    "openai": "^4.68.0",
+    "resend": "^4.0.0"
+  }
+}
