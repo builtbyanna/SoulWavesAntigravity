@@ -77,12 +77,14 @@
       body: `I'm an AI. Anything personal you share (like your email) gets stored safely.`,
       start: "Got it, let's chat",
       privacy: 'Privacy Policy',
+      privacyHref: '/privacy-policy.html',
     },
     de: {
       title: "Hey, ich bin Frieda. ✨",
       body: `Ich bin eine KI. Persönliche Infos, die du teilst (z. B. deine E-Mail), werden sicher gespeichert.`,
       start: "Alles klar, los geht's",
       privacy: 'Datenschutz',
+      privacyHref: '/datenschutz.html',
     },
   };
 
@@ -319,7 +321,7 @@
         <p class="frieda-consent__body">${c.body.replace(/\n/g, '<br>')}</p>
         <div class="frieda-consent__actions">
           <button class="frieda-consent__start" id="frieda-consent-start">${c.start}</button>
-          <a class="frieda-consent__privacy" href="/datenschutz.html" target="_blank" rel="noopener">${c.privacy} ↗</a>
+          <a class="frieda-consent__privacy" href="${c.privacyHref}" target="_blank" rel="noopener">${c.privacy} ↗</a>
         </div>
       </div>`;
 
