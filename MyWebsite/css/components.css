@@ -1071,3 +1071,70 @@ img.sw-footer__logo {
     padding: 2rem 1.25rem;
   }
 }
+
+/* ---- Retainer card accordion (mobile only) ---- */
+
+.retainer-card__trigger {
+  display: none;
+}
+
+.retainer-card__chevron {
+  flex-shrink: 0;
+  color: var(--sw-copper);
+  transition: transform 0.3s ease;
+}
+
+.retainer-card.is-open .retainer-card__chevron {
+  transform: rotate(180deg);
+}
+
+@media (max-width: 600px) {
+  .retainer-card__trigger {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    text-align: left;
+    gap: 0.75rem;
+  }
+
+  .retainer-card__trigger:focus-visible {
+    outline: 2px solid var(--sw-copper);
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
+
+  .retainer-card__trigger-meta {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex-shrink: 0;
+  }
+
+  .retainer-card__price-short {
+    font-size: 0.82rem;
+    font-weight: 500;
+    color: var(--sw-copper);
+    white-space: nowrap;
+  }
+
+  .retainer-card__body {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.35s ease, padding-top 0.2s ease;
+    padding-top: 0;
+  }
+
+  .retainer-card.is-open .retainer-card__body {
+    max-height: 520px;
+    padding-top: 1rem;
+  }
+
+  .retainer-card__trigger .retainer-card__tier {
+    margin-bottom: 0;
+  }
+}

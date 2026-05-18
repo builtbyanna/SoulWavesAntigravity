@@ -366,6 +366,14 @@
   .frieda-panel.open {
     max-height: 480px;
   }
+
+  .frieda-widget {
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+}
+
+@media (max-height: 600px) and (max-width: 768px) {
+  .frieda-panel.open { max-height: 42vh; }
 }
 
 /* ---- GDPR consent overlay ---- */

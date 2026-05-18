@@ -27,8 +27,6 @@
   filter: blur(50px);
 }
 
-/* Bottom fade handled by section-seam--dark-to-light element after the hero */
-
 /* Image: diagonal bleed from right */
 .page-hero__img-wrap {
   position: absolute;
@@ -404,4 +402,24 @@
   .pricing-block {
     padding: 1.5rem;
   }
+}
+
+@media (max-width: 480px) {
+  .page-content .container,
+  .page-cta-section .container { padding: 0 1rem; }
+  .page-content__section { margin-bottom: 1.5rem; }
+  .page-hero { padding-top: 120px; padding-bottom: 2.5rem; }
+}
+
+
+/* ---- Parallax rise: dark CTA section on subpages ---- */
+.page-cta-section.will-rise > .container {
+  opacity: 0;
+  transform: translateY(80px);
+  transition: transform 1.4s cubic-bezier(0.16, 1, 0.3, 1), opacity 1s ease;
+}
+
+.page-cta-section.is-risen > .container {
+  opacity: 1;
+  transform: translateY(0);
 }
